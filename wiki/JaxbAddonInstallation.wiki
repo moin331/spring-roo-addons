@@ -1,4 +1,4 @@
-#How to install _Spring Roo_ jaxb-addon.
+How to install _Spring Roo_ jaxb-addon.
 
 Open the roo shell
 {{{
