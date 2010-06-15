@@ -1,0 +1,14 @@
+How to install _Spring Roo_ http-representations addon.
+ # Download the addon: [http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar]
+ # Open the roo shell
+{{{
+  roo>felix shell start file:/<absolute path to the addon directory>/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar
+}}}
+ # To verify the installation type:
+{{{
+  roo>osgi ps 
+}}}
+ Amongst other addons you should see:
+{{{
+[  61] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.0.SNAPSHOT)
+}}}
