@@ -4,7 +4,7 @@
 	<groupId>net.tzolov.httprepresentations.roo.addon</groupId>
 	<artifactId>net.tzolov.httprepresentations.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<name>net.tzolov.httprepresentations.roo.addon</name>
 	<properties>
 		<roo.version>1.1.0.M1</roo.version>
