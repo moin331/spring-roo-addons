@@ -1,5 +1,9 @@
 ===How to install the http-representations Spring Roo Addon===
 
+_*Note*: The Roo 1.1.0.M1 shell within the STS 2.3.3.M1 executes the *osgi* commands without showing the output. 
+Additionally the shell cache directory is removed every time the shell is re-started. So you would need to re-install the addons every time you re-open the shell. 
+Until these issues get resolved you may consider using the stand-alone Roo shell instead_
+
  * Get the latest http-representations addon: 
   [http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar]
  * Install the addon via the Roo shell
