@@ -1,14 +1,27 @@
-How to install _Spring Roo_ http-representations addon.
- # Download the addon: [http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar]
- # Open the roo shell
+===How to install http-representations _Spring Roo 1.1 Addon_===
+
+ * Get the latest http-representations addon: 
+  [http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar]
+ * Install the addon via the Roo shell
 {{{
-  roo>felix shell start file:/<absolute path to the addon directory>/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar
+  roo> felix shell start file:/<absolute path to the addon directory>/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar
 }}}
- # To verify the installation type:
-{{{
-  roo>osgi ps 
+  (_Note: You could skip above steps and install the addon directly from the googlecode site:_
+{{{ 
+roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar 
 }}}
- Amongst other addons you should see:
+ * Verify the installation:
 {{{
-[  61] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.0.SNAPSHOT)
+  roo> osgi ps 
+}}}
+ * You should see something like:
+{{{
+...
+[  60] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.0.SNAPSHOT)
+}}}
+ * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
+{{{
+...
+http resource add oxm - Define a class for object to xml mapping response
+http resource representation setup - Install HTTP Content Negotiation Resolver into your project
 }}}
