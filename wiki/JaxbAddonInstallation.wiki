@@ -1,4 +1,4 @@
-===How to install jaxb-addon _Spring Roo Addon_===
+===How to install jaxb-addon Spring Roo Addon===
 
  * Get the latest jaxb-addon: 
   [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar]
