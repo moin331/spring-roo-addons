@@ -1,4 +1,4 @@
-===How to install http-representations _Spring Roo 1.1 Addon_===
+===How to install the http-representations Spring Roo Addon===
 
  * Get the latest http-representations addon: 
   [http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar]
