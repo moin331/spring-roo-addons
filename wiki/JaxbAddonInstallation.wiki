@@ -1,14 +1,17 @@
-How to install _Spring Roo_ jaxb-addon.
- # Download the addon: [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar]
- # Open the roo shell
+===How to install jaxb-addon _Spring Roo Addon_===
+
+ * Get the latest jaxb-addon: 
+  [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar]
+ * Install the addon via the Roo shell
 {{{
-  roo>felix shell start file:/<absolute path to the addon directory>/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar
+  roo> felix shell start file:/<absolute path to the addon directory>/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar
 }}}
- # To verify the installation type:
+ * Verify the installation:
 {{{
-  roo>osgi ps 
+  roo> osgi ps 
 }}}
- Amongst other addons you should see:
+ * You should see something like:
 {{{
+...
 [  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.0.SNAPSHOT)
 }}}
