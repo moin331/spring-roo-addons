@@ -2,7 +2,7 @@
 
 Run from the Roo shell:
 {{{
-roo>jaxb xsd compiler setup
+roo> jaxb xsd compiler setup
 }}}	
 Optional parameters:
  * *generateDirectory* -  Target directory for the generated code, target/generated-sources/xjc by default 
