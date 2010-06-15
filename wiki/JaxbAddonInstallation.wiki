@@ -1,5 +1,9 @@
 ===How to install jaxb-addon Spring Roo Addon===
 
+_*Note*: The Roo 1.1.0.M1 shell within the STS 2.3.3.M1 executes the *osgi* commands without showing the output. 
+Additional issue is that the Roo shell cache directory is removed every time the shell is re-started. In result you would need to re-install the addons every time you re-open the shell. 
+Hopefully these issues will be resolved in the next milestone. In the meantime you may consider using the stand-alone Roo shell_
+
  * Get the latest jaxb-addon: 
   [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar]
  * Install the addon via the Roo shell
