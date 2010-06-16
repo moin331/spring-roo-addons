@@ -1,7 +1,7 @@
 #labels Phase-Deploy
 ===How to install the http-representations Spring Roo Addon===
 
-_*Note*: The Roo 1.1.0.M1 shell within the STS 2.3.3.M1 executes the *osgi* commands without showing the output. 
+_*Note*: The Roo 1.1.0.M1 shell within the [http://www.springsource.com/products/springsource-google-download STS 2.3.3.M1] executes the *osgi* commands without showing the output. 
 Additionally the shell cache directory is removed every time the shell is re-started. So you would need to re-install the addons every time you re-open the shell. 
 Until these issues get resolved you may consider using the stand-alone Roo shell instead_
 
