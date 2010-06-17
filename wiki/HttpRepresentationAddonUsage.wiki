@@ -1,9 +1,11 @@
-Add http content negotiation setup
+== How to use the http representation addon ==
+
+ * Add http content negotiation setup
 {{{
 roo> http resource representation setup
 }}}
 
-Add one ore more JAXB2 annotated classes to the marshaller configuration.
+ * Add one ore more JAXB2 annotated classes to the marshaller configuration.
 {{{
 roo> http resource add oxm --class my.package.MyJaxbClass
 }}}
