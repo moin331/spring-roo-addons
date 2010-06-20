@@ -10,7 +10,7 @@ _*Note*: Spring Roo 1.1.0.M1 can not handle *project-info.java* files in the pro
  roo> osgi update --bundleSymbolicName org.springframework.roo.classpath 
                   --url  http://spring-roo-addons.googlecode.com/files/org.springframework.roo.classpath-1.1.0.M1-patched-tzolov.jar
 }}}
-_This workaround works only with the standalone Roo version. After the update you should restart your roo shell for the fix to be applied_
+_This workaround works only with the standalone Roo shell. Make sure to restart the shell after the update for the fix to be applied_
 
 === Installation instructions ===
  * Install the addon directly from the googlecode site
