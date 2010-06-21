@@ -1,45 +1,64 @@
 #summary One-sentence summary of this page.
 
 === Tutorial Roo Log ===
+
+Install the required addons (if not installed)
 {{{
-
-// Spring Roo 1.1.0.M1 
-
-// Install the following addons (if not installed)
 felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar 
 felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar 
 osgi update --bundleSymbolicName org.springframework.roo.classpath --url http://spring-roo-addons.googlecode.com/files/org.springframework.roo.classpath-1.1.0.M1-patched-tzolov.jar 
+}}}
 
+Check if the right addons are installed
+{{{
 osgi ps
-// Amongst the other you should see the following addons installed.
-// [  55] [Active     ] [    1] Spring Roo - Classpath - Patched (tzolov) (1.1.0.M1)
-// [  56] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.0.SNAPSHOT)
-// [  57] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.0.SNAPSHOT)
+}}}
+Amongst the other you should see the following addons installed.
+{{{
+...
+[  55] [Active     ] [    1] Spring Roo - Classpath - Patched (tzolov) (1.1.0.M1)
+[  56] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.0.SNAPSHOT)
+[  57] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.0.SNAPSHOT)
+}}}
 
+Create the project and set the persistent layer
+{{{
 project --topLevelPackage org.demo
 persistence setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+}}}
+
+Set the jaxb maven configuration
+{{{
 jaxb xsd compiler setup --generateDirectory src/main/java
+}}}
 
-//!!! Copy the people.xsd in your src/main/resource directory
-
+Copy the people.xsd in your src/main/resource directory and the build the project to enforce the generation.
+{{{
 perform package
+}}}
+Check whether the org.example.people... classes have been generated in your src/main/java directory
 
-//Check whether the org.example.people... classes have been generated in your src/main/java directory
-
+Create the People controller
+{{{
 controller class --class ~.web.PeopleController
+}}}
 
-// Modify the PeopleController as explained in the blog. Do not forget to add the import declaration 
-// for People and People.Person classes!
+Add the getPeople(...) method to the PeopleController as explained in the blog. Do not forget to add the import declaration for the People and the People.Person classes!
 
-// Modify the index.jspx as explained in the blog. 
+Extend the index.jspx file as explained in the blog. 
 
+Setup the http representation configuration
+{{{
 http resource representation setup
+}}}
 
-// If the People class is generated and available on the classpath you should be able to use autocompletion to resolve it. 
+Add the People class to the oxm marshaling settings. You should be able to use autocompletion to resolve it:
+{{{ 
 http resource add oxm --class org.example.people.People
+}}}
 
+Build the project and start it in the Tomcat container
+{{{
 perform package
-
-//Use the following maven command to run the project in a Tomcat container. 
 perform command --mavenCommand tomcat:run 
 }}}
