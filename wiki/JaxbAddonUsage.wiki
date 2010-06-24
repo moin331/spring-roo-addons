@@ -1,3 +1,5 @@
+#summary How to to use the jax-addon in Roo shell
+
 _*Note*: Spring Roo 1.1.0.M1 can not handle *project-info.java* files in the project source folders due to [http://jira.springframework.org/browse/ROO-1022 ROO-1022]. On the other hand the project-info.java is expected output for the Jaxb to generate process. So if the generated source code is located on the project source path (e.g. src/main/java for example) you may consider trying the following workaround:_
 {{{
  roo> osgi update --bundleSymbolicName org.springframework.roo.classpath 
