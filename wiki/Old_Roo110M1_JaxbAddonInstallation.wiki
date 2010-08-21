@@ -1,13 +1,38 @@
-#summary One-sentence summary of this page.
+#summary *Deprecated - Roo 1.1.0.M1 only* - How to to install the jaxb-addon in your Roo shell.
 
-= Introduction =
+=== *Deprecated - Roo 1.1.0.M1 only* How to install jaxb-addon Spring Roo Addon===
 
-Add your content here.
+_*Note*: The Roo 1.1.0.M1 shell within the [http://www.springsource.com/products/springsource-google-download STS 2.3.3.M1] executes the *osgi* commands without showing the output. 
+Additionally the shell cache directory is removed every time the shell is re-started. So you would need to re-install the addons every time you re-open the shell. 
+Until these issues get resolved you may consider using the stand-alone Roo shell instead_
 
+_*Note*: Spring Roo 1.1.0.M1 can not handle *project-info.java* files in the project source folders due to [http://jira.springframework.org/browse/ROO-1022 ROO-1022]. On the other hand the project-info.java is expected output for the Jaxb to generate process. So if the generated source code is located on the project source path (e.g. src/main/java for example) you may consider trying the following workaround:_
+{{{
+ roo> osgi update --bundleSymbolicName org.springframework.roo.classpath 
+                  --url  http://spring-roo-addons.googlecode.com/files/org.springframework.roo.classpath-1.1.0.M1-patched-tzolov.jar
+}}}
+_This workaround works only with the standalone Roo shell. Make sure to restart the shell after the update for the fix to be applied_
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=== Installation instructions ===
+ * Install the addon directly from the googlecode site
+{{{ 
+  roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar 
+}}}
+  Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar jaxb.roo.addon] and install it from your local folder:
+{{{
+  roo> felix shell start file:/<absolute path to the addon directory>/net.tzolov.jaxb.roo.addon-1.1.0-SNAPSHOT.jar
+}}}
+ * Verify the installation:
+{{{
+  roo> osgi ps 
+}}}
+ * You should see something like:
+{{{
+...
+[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.0.SNAPSHOT)
+}}}
+ * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
+{{{
+...
+jaxb xsd compiler setup - Install JAXB2 maven plugin to generate Java classes from an XML schema with the xjc schema compiler tool.
+}}}
