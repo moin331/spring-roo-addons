@@ -1,4 +1,4 @@
-#summary *Deprecated - Roo 1.1.0.M1 only* - How to to install the jaxb-addon in your Roo shell.
+#summary (Deprecated - Roo 1.1.0.M1 only) - How to to install the jaxb-addon in your Roo shell.
 
 === *Deprecated - Roo 1.1.0.M1 only* How to install jaxb-addon Spring Roo Addon===
 
