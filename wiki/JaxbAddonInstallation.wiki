@@ -8,6 +8,10 @@ Additionally the shell cache directory is removed every time the shell is re-sta
 Until these issues get resolved you may consider using the stand-alone Roo shell instead_
 
 === Installation instructions ===
+ * Uninstall the older addon versions
+{{{
+  roo> osgi uninstall --bundleSymbolicName net.tzolov.jaxb.roo.addon
+}}}
  * Install the addon directly from the googlecode site
 {{{ 
   roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.1-SNAPSHOT.jar 
