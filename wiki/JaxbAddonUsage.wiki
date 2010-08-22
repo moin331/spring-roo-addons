@@ -1,6 +1,6 @@
 #summary How to to use the jax-addon in Roo shell
 
-_*Note*: With Spring Roo 1.1.0.M2 the [http://jira.springframework.org/browse/ROO-1022 ROO-1022] issue has been resolve and there is no need to install the org.springframework.roo.classpath-1.1.0.M1-patched-tzolov.jar any more.
+_*Note*: [http://jira.springframework.org/browse/ROO-1022 ROO-1022] issue has been resolve and there is no need to install the patched org.springframework.roo.classpath-1.1.0.M1.jar any more.
 
 == How to use the jax-addon ==
 
