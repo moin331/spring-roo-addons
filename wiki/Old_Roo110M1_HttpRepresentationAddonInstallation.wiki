@@ -1,3 +1,5 @@
+#summary (Deprecated - Roo 1.1.0.M1 only)
+
 ===How to install the http-representations Spring Roo Addon===
 
 _*Note*: The Roo 1.1.0.M1 shell within the [http://www.springsource.com/products/springsource-google-download STS 2.3.3.M1] executes the *osgi* commands without showing the output. 
