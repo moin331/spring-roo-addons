@@ -14,7 +14,7 @@ Until these issues get resolved you may consider using the stand-alone Roo shell
 }}}
   Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.1-SNAPSHOT.jar jaxb.roo.addon] and install it from your local folder:
 {{{
-  roo> felix shell start file:/<absolute path to the addon directory>/net.tzolov.jaxb.roo.addon-1.1.1-SNAPSHOT.jar
+  roo> felix shell start file:/<absolute path>/net.tzolov.jaxb.roo.addon-1.1.1-SNAPSHOT.jar
 }}}
  * Verify the installation:
 {{{
