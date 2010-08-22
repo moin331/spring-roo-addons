@@ -13,7 +13,7 @@ Until these issues get resolved you may consider using the stand-alone Roo shell
 {{{ 
 roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar 
 }}}
-or download the [http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar httprepresentations.roo.addon] and install it locally:
+   or download the [http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar httprepresentations.roo.addon] and install it locally:
 {{{
   roo> felix shell start file:/<absolute path>/net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar
 }}}
