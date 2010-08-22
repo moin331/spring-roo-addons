@@ -18,17 +18,21 @@
 
 	<bean id="jsonJaxbAnnotationIntrospector" class="org.codehaus.jackson.xc.JaxbAnnotationIntrospector"/>
 
+	<bean id="visibilityChecker" class="org.codehaus.jackson.map.introspect.VisibilityChecker.Std" factory-method="defaultInstance"/>
+
 	<bean id="jsonObjectMapper" class="org.codehaus.jackson.map.ObjectMapper">
 		<property name="serializationConfig">
 			<bean class="org.codehaus.jackson.map.SerializationConfig">
 				<constructor-arg ref="jsonBasicClassIntrospector"/>
 				<constructor-arg ref="jsonJaxbAnnotationIntrospector" />
+				<constructor-arg ref="visibilityChecker"/>				
 			</bean>
 		</property>
 		<property name="deserializationConfig">
 			<bean class="org.codehaus.jackson.map.DeserializationConfig">
 				<constructor-arg ref="jsonBasicClassIntrospector"/>
 				<constructor-arg ref="jsonJaxbAnnotationIntrospector" />
+				<constructor-arg ref="visibilityChecker"/>				
 			</bean>
 		</property>
 	</bean>
