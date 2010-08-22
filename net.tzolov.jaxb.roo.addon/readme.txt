@@ -48,7 +48,7 @@ Amongst other addons you should see:
 ======================================================================
 From the roo shell call:
 
-  roo>osgi uninstall net.tzolov.jaxb.roo.addon
+  roo>osgi uninstall --bundleSymbolicName net.tzolov.jaxb.roo.addon
   
 addon would disappear from the osgi process list:
 
