@@ -1,20 +1,23 @@
 #labels Phase-Deploy
 ===How to install the http-representations Spring Roo Addon===
 
-_*Note*: The Roo 1.1.0.M1 shell within the [http://www.springsource.com/products/springsource-google-download STS 2.3.3.M1] executes the *osgi* commands without showing the output. 
+_*Note*: The Roo 1.1.0.M2 shell within the [http://www.springsource.com/products/springsource-google-download STS 2.3.3.M2] executes the *osgi* commands without showing the output. 
 Additionally the shell cache directory is removed every time the shell is re-started. So you would need to re-install the addons every time you re-open the shell. 
 Until these issues get resolved you may consider using the stand-alone Roo shell instead_
 
- * Get the latest http-representations addon: 
-  [http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar]
- * Install the addon via the Roo shell
+ * Uninstall the older addon versions
 {{{
-  roo> felix shell start file:/<absolute path to the addon directory>/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar
+  roo> osgi uninstall --bundleSymbolicName net.tzolov.httprepresentations.roo.addon
 }}}
-  (_Note: You could skip above steps and install the addon directly from the googlecode site:_
+ * Install the addon directly from the googlecode site:
 {{{ 
-roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.0-SNAPSHOT.jar 
+roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar 
 }}}
+or download the [http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar httprepresentations.roo.addon] and install it locally:
+{{{
+  roo> felix shell start file:/<absolute path>/net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar
+}}}
+
  * Verify the installation:
 {{{
   roo> osgi ps 
@@ -22,7 +25,7 @@ roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.
  * You should see something like:
 {{{
 ...
-[  60] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.0.SNAPSHOT)
+[  60] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.1.SNAPSHOT)
 }}}
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
