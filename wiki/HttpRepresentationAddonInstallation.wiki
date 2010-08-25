@@ -11,11 +11,11 @@ Until these issues get resolved you may consider using the stand-alone Roo shell
 }}}
  * Install the addon directly from the googlecode site:
 {{{ 
-roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar 
+roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar 
 }}}
-   or download the [http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar httprepresentations.roo.addon] and install it locally:
+   or download the [http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar httprepresentations.roo.addon] and install it locally:
 {{{
-  roo> felix shell start file:/<absolute path>/net.tzolov.httprepresentations.roo.addon-1.1.1-SNAPSHOT.jar
+  roo> felix shell start file:/<absolute path>/net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar
 }}}
 
  * Verify the installation:
@@ -25,7 +25,7 @@ roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.
  * You should see something like:
 {{{
 ...
-[  60] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.1.SNAPSHOT)
+[  60] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.2.SNAPSHOT)
 }}}
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
