@@ -1,4 +1,4 @@
-#summary How to to install the jaxb-addon in your Roo (1.1.0.M2) shell
+#summary How to to install the jaxb-addon in your Roo (1.1.0.M3) shell
 #labels Phase-Deploy
 
 ===How to install jaxb-addon Spring Roo Addon===
@@ -14,11 +14,11 @@ Until these issues get resolved you may consider using the stand-alone Roo shell
 }}}
  * Install the addon directly from the googlecode site
 {{{ 
-  roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.1-SNAPSHOT.jar 
+  roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar 
 }}}
-  Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.1-SNAPSHOT.jar jaxb.roo.addon] and install it from your local folder:
+  Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar jaxb.roo.addon] and install it from your local folder:
 {{{
-  roo> felix shell start file:/<absolute path>/net.tzolov.jaxb.roo.addon-1.1.1-SNAPSHOT.jar
+  roo> felix shell start file:/<absolute path>/net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar
 }}}
  * Verify the installation:
 {{{
@@ -27,7 +27,7 @@ Until these issues get resolved you may consider using the stand-alone Roo shell
  * You should see something like:
 {{{
 ...
-[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.1.SNAPSHOT)
+[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.2.SNAPSHOT)
 }}}
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
