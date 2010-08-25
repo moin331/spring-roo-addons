@@ -4,10 +4,10 @@
 	<groupId>net.tzolov.jaxb.roo.addon</groupId>
 	<artifactId>net.tzolov.jaxb.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.1.1-SNAPSHOT</version>
+	<version>1.1.2-SNAPSHOT</version>
 	<name>net.tzolov.jaxb.roo.addon</name>
 	<properties>
-		<roo.version>1.1.0.M2</roo.version>
+		<roo.version>1.1.0.M3</roo.version>
 	</properties>
 	<repositories>
 		<repository>
