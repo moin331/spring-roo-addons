@@ -3,8 +3,6 @@
 
 ===How to install jaxb-addon Spring Roo Addon===
 
-_*Note*: Roo 1.1.0.M3 is incompatible [http://www.springsource.com/products/springsource-google-download STS 2.3.3.M2]. Until STS 2.3.3.M3 is released you should use the stand-alone Roo shell instead_
-
 === Installation instructions ===
  * Uninstall the older addon versions
 {{{
