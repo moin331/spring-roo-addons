@@ -1,1 +1,1 @@
-@set ROO_ADDON_CLASSPATH_FILE="C:\Development\sandbox\raddons-trunk\net.tzolov.jaxb.roo.addon\target\roo_classpath.txt"
+@set ROO_ADDON_CLASSPATH_FILE="C:\Development\projects\roo-addons\net.tzolov.jaxb.roo.addon\target\roo_classpath.txt"
