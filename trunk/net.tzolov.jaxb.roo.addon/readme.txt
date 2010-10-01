@@ -22,7 +22,7 @@ classes out of the XML Schemas, DTDs and so on.
    
    roo>perform package
 
-Result is a net.tzolov.jaxb.roo.addon-0.1.1-SNAPSHOT.jar created in  
+Result is a net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar created in  
 your target directory. 
 
 ======================================================================
@@ -31,7 +31,7 @@ your target directory.
    
 Open the roo shell
 
-  roo>felix shell start file:/<absolute path to the target directory>/net.tzolov.jaxb.roo.addon-0.1.1-SNAPSHOT.jar
+  roo>felix shell start file:/<absolute path to the target directory>/net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar
 
 If successful this operation will restart your roo shell.
 
@@ -41,7 +41,7 @@ To verify the installation type:
 
 Amongst other addons you should see:
 
-[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (0.1.1.SNAPSHOT)
+[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.2.SNAPSHOT)
 
 ======================================================================
 3. Uninstall the addon
