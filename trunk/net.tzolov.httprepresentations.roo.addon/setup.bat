@@ -1,1 +1,0 @@
-@set ROO_ADDON_CLASSPATH_FILE="C:\Development\projects\roo-addons\net.tzolov.httprepresentations.roo.addon\target\roo_classpath.txt"
