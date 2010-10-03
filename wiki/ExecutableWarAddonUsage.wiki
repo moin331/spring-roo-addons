@@ -1,4 +1,4 @@
-#summary Shows how to configure your maven project to build executable wars
+#summary How to configure your maven project to build executable wars
 
 == How to use the executable war addon ==
 
