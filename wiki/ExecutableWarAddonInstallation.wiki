@@ -10,7 +10,7 @@
 {{{ 
   roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar
 }}}
-  Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar jaxb.roo.addon] and install it from your local folder:
+  Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar executable.war.roo.addon] and install it from your local folder:
 {{{
   roo> felix shell start file:/<absolute path>/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar
 }}}
