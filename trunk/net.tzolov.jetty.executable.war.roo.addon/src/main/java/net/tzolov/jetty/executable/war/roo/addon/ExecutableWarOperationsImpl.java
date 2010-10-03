@@ -1,6 +1,7 @@
 package net.tzolov.jetty.executable.war.roo.addon;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -9,6 +10,7 @@ import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.osgi.service.component.ComponentContext;
 import org.springframework.roo.metadata.MetadataService;
+import org.springframework.roo.model.JavaPackage;
 import org.springframework.roo.process.manager.FileManager;
 import org.springframework.roo.process.manager.MutableFile;
 import org.springframework.roo.project.Dependency;
@@ -33,6 +35,14 @@ import org.w3c.dom.Element;
 @Service
 public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 
+	private static final String EXECWAR_TEMPLATE_XML = "execwar-template.xml";
+
+	private static final String START_TEMPLATE_JAVA = "ExecWar-template.java";
+
+	private static final String EXECWAR_XML = "execwar.xml";
+
+	private static final String START_JAVA = "ExecWar.java";
+
 	private static Logger logger = Logger
 			.getLogger(ExecutableWarOperations.class.getName());
 
@@ -52,12 +62,24 @@ public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 	}
 
 	public boolean isExecutableWarAvailible() {
+
+		if (getProjectMethadata() == null) {
+			return false;
+		}
+
+		// only permit installation if not applied so far
+		if (fileManager.exists(pathResolver.getIdentifier(Path.SRC_MAIN_JAVA,
+				getTopLevelPackageFilePath() + "/" + START_JAVA))) {
+
+			return false;
+		}
+
 		return true;
-		// return metadataService.get(ProjectMetadata.getProjectIdentifier()) !=
-		// null;
 	}
 
 	public void setupExecutableWar() {
+
+		logger.info("Install Executable War!");
 
 		// Parse the configuration.xml file
 		Element configurationXml = XmlUtils.getConfiguration(getClass());
@@ -65,15 +87,37 @@ public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 		// Add dependencies to POM
 		updateDependencies(configurationXml);
 
+		// Update plugins from the configuration file (note: only plugin's
+		// definition is performed here. The configuration setup is performed
+		// below
+		updateBuildPlugins(configurationXml);
+
 		// Create an assembly plugin or update its configuration
-		updateAssemblyPlugin(configurationXml);
+		updateAssemblyPluginConfiguration();
 
 		// Copy the execwar.xml template
-		copyTemplate(Path.SRC_MAIN_RESOURCES, "execwar.xml",
-				"execwar-template.xml");
+		copyTemplate(Path.SRC_MAIN_RESOURCES, EXECWAR_XML, EXECWAR_TEMPLATE_XML);
 
 		// Copy the Start.java template
-		copyTemplate(Path.SRC_MAIN_JAVA, "Start.java", "Start-template.java");
+		copyTemplate(Path.SRC_MAIN_JAVA, getTopLevelPackageFilePath() + "/"
+				+ START_JAVA, START_TEMPLATE_JAVA);
+	}
+
+	private String getTopLevelPackageFilePath() {
+
+		String topLevelPackageFilePath = getProjectMethadata()
+				.getTopLevelPackage().getFullyQualifiedPackageName()
+				.replace(".", "/");
+
+		return topLevelPackageFilePath;
+	}
+
+	private ProjectMetadata getProjectMethadata() {
+
+		ProjectMetadata projectMetadata = (ProjectMetadata) metadataService
+				.get(ProjectMetadata.getProjectIdentifier());
+
+		return projectMetadata;
 	}
 
 	private void copyTemplate(Path path, String targetName, String templateName) {
@@ -83,56 +127,46 @@ public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 
 		if (!fileManager.exists(execWarDestination)) {
 			try {
-				FileCopyUtils.copy(TemplateUtils.getTemplate(getClass(),
-						templateName),
+
+				ProjectMetadata projectMetadata = getProjectMethadata();
+
+				String input = FileCopyUtils
+						.copyToString(new InputStreamReader(TemplateUtils
+								.getTemplate(getClass(), templateName)));
+
+				input = input.replace("__TOP_LEVEL_PACKAGE__", projectMetadata
+						.getTopLevelPackage().getFullyQualifiedPackageName());
+
+				input = input.replace("__PROJECT_NAME__",
+						projectMetadata.getProjectName());
+
+				FileCopyUtils.copy(input.getBytes(),
 						fileManager.createFile(execWarDestination)
 								.getOutputStream());
 			} catch (IOException ioe) {
 				throw new IllegalStateException(ioe);
 			}
 		}
-
-		logger.info(targetName + "added to" + path);
-
 	}
 
 	private void updateDependencies(Element configuration) {
 
-		List<Element> databaseDependencies = XmlUtils
+		List<Element> xmlDependencies = XmlUtils
 				.findElements("/configuration/execwar/dependencies/dependency",
 						configuration);
 
-		for (Element dependencyElement : databaseDependencies) {
-			projectOperations
-					.dependencyUpdate(new Dependency(dependencyElement));
+		for (Element xmlDependecy : xmlDependencies) {
+			projectOperations.dependencyUpdate(new Dependency(xmlDependecy));
 		}
 	}
 
-	private void updateAssemblyPlugin(Element configurationXml) {
+	private void updateBuildPlugins(Element configuration) {
 
-		Element assemblyPluginElement = XmlUtils.findFirstElement(
-				"//plugin[artifactId='maven-assembly-plugin']",
-				configurationXml);
+		List<Element> xmlPlugins = XmlUtils.findElements(
+				"/configuration/execwar/build/plugins/plugin", configuration);
 
-		Assert.notNull(assemblyPluginElement);
-
-		Plugin assemblyPlugin = new Plugin(assemblyPluginElement);
-		logger.info("Assembly plugin:" + assemblyPlugin.toString());
-
-		ProjectMetadata projectMetadata = (ProjectMetadata) metadataService
-				.get(ProjectMetadata.getProjectIdentifier());
-		Assert.notNull(projectMetadata, "Project metadata unavailable");
-
-		if (projectMetadata.getBuildPluginsExcludingVersion(assemblyPlugin)
-				.isEmpty()) {
-
-			// Add assembly plugin to the POM
-			projectOperations.buildPluginUpdate(assemblyPlugin);
-
-		} else {
-
-			// Assembly plugin already exists. Update its configuration
-			updateAssemblyPluginConfiguration();
+		for (Element xmlPlugin : xmlPlugins) {
+			projectOperations.buildPluginUpdate(new Plugin(xmlPlugin));
 		}
 	}
 
@@ -182,7 +216,12 @@ public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 			Element archive = document.createElement("archive");
 			Element manifest = document.createElement("manifest");
 			Element mainClass = document.createElement("mainClass");
-			mainClass.setTextContent("Start");
+
+			JavaPackage topLevelPackage = getProjectMethadata()
+					.getTopLevelPackage();
+
+			mainClass.setTextContent(topLevelPackage
+					.getFullyQualifiedPackageName() + ".ExecWar");
 			manifest.appendChild(mainClass);
 			archive.appendChild(manifest);
 			pluginConfiguration.appendChild(archive);
@@ -194,4 +233,33 @@ public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 					ex);
 		}
 	}
+
+/*	private Element createMavenAssemblyPluginConfiguration(Document document) {
+
+		Element plugin = document.createElement("plugin");
+
+		Element groupId = document.createElement("groupId");
+		groupId.setTextContent("org.apache.maven.plugins");
+		plugin.appendChild(groupId);
+
+		Element artifactId = document.createElement("artifactId");
+		artifactId.setTextContent("maven-assembly-plugin");
+		plugin.appendChild(artifactId);
+
+		Element version = document.createElement("version");
+		version.setTextContent("2.2-beta-5");
+		plugin.appendChild(version);
+
+		Element configuration = document.createElement("configuration");
+		plugin.appendChild(configuration);
+
+		Element plugins = XmlUtils.findFirstElement("//plugins",
+				(Element) document.getFirstChild());
+
+		Assert.notNull(plugins, "Failed to resolve the plugions section");
+
+		plugins.appendChild(plugin);
+
+		return configuration;
+	} */
 }
