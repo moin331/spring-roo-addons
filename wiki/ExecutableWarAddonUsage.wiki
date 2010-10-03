@@ -16,7 +16,7 @@ or directly from the command console:
 {{{
  mvn assembly:assembly
 }}}
-This would generate the standards XXXX.war file as well as an additional XXX-EXECWAR.war that can be executed as explained below. 
+This generates the standards XXXX.war application as well as an additional XXX-EXECWAR.war that can be executed as explained below or deployed in a web container. 
 
  * Execute the war
 From the command line run
