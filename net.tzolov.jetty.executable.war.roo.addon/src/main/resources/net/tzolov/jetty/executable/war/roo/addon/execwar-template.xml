@@ -23,7 +23,7 @@
     <fileSet>
       <directory>target/classes</directory>
       <includes>
-      	<include>Start.class</include>
+      	<include>/**/*/ExecWar.class</include>
       </includes>
       <outputDirectory/>
     </fileSet>

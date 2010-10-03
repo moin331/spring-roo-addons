@@ -13,9 +13,9 @@ import org.springframework.roo.shell.CommandMarker;
  */
 @Component
 @Service
-public class ExecutionWarCommands implements CommandMarker {
+public class ExecutableWarCommands implements CommandMarker {
 
-	private static Logger logger = Logger.getLogger(ExecutionWarCommands.class
+	private static Logger logger = Logger.getLogger(ExecutableWarCommands.class
 			.getName());
 
 	@Reference
@@ -26,7 +26,7 @@ public class ExecutionWarCommands implements CommandMarker {
 		return operations.isExecutableWarAvailible();
 	}
 
-	@CliCommand(value = "executable war setup", help = "Make an War application self-executable ")
+	@CliCommand(value = "executable war setup", help = "Creates an <XXX>-EXECWAR.war executable application. Usage: java -jar <XXX>-EXECWAR.war")
 	public void setupExecutableWar() {
 		operations.setupExecutableWar();
 	}

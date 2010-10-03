@@ -5,7 +5,7 @@
   <artifactId>net.tzolov.jetty.executable.war.roo.addon</artifactId>
   <packaging>bundle</packaging>
   <version>0.1.0.BUILD-SNAPSHOT</version>
-  <name>net-tzolov-jetty-executable-war-roo-addon</name>
+  <name>net.tzolov.jetty.executable.war.roo.addon</name>
   <organization>
     <name>Your project/company name goes here (used in copyright and vendor information in the manifest)</name>
   </organization>
@@ -93,6 +93,20 @@
       <version>${roo.version}</version>
       <scope>provided</scope>
     </dependency>
+
+	<dependency>
+		<groupId>org.springframework.roo</groupId>
+		<artifactId>org.springframework.roo.model</artifactId>
+		<version>${roo.version}</version>
+		<type>bundle</type>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.roo</groupId>
+		<artifactId>org.springframework.roo.classpath</artifactId>
+		<version>${roo.version}</version>
+		<type>bundle</type>
+	</dependency>
+    
   </dependencies>
   <scm>
     <connection>scm:svn:https://${google.code.project.name}.googlecode.com/svn/trunk</connection>
