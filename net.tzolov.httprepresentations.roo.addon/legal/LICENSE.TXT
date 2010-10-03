@@ -1,1 +1,19 @@
-GNU General Public License version 3.0 (GPLv3)
+===============================================================================
+LEGAL NOTICES
+===============================================================================
+
+Http-Representation Roo Addon is copyright (C) 2008-2010 Christian Tzolov
+(christian@tzolov.net). All Rights Reserved. 
+
+Http-Representation is licensed under the GPLv3: 
+http://www.gnu.org/copyleft/gpl.html
+
+The GPLv3 does not impact people simply using the Addon to build software.  
+
+Roo itself is a development time only tool. No Roo JARs whatsoever 
+(Http-Representation including) are required by your project at runtime.
+
+GPLv3 impacts only those wishing to improve, build on, redistribute, extend 
+etc the Addon itself.
+
+[end]
