@@ -1,0 +1,30 @@
+#summary How to to install the executable-war-addon with Roo 1.1.x shell
+
+===How to install executable-war-addon Spring Roo Addon===
+
+ * Uninstall the older addon versions
+{{{
+  roo> osgi uninstall --bundleSymbolicName net.tzolov.jetty.executable.war.roo.addon
+}}}
+ * Install the addon directly from the googlecode site
+{{{ 
+  roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar
+}}}
+  Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar jaxb.roo.addon] and install it from your local folder:
+{{{
+  roo> felix shell start file:/<absolute path>/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar
+}}}
+ * Verify the installation:
+{{{
+  roo> osgi ps 
+}}}
+ * You should see something like:
+{{{
+...
+[  60] [Active     ] [    1] net-tzolov-jetty-executable-war-roo-addon (0.1.0.BUILD-SNAPSHOT)
+}}}
+ * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
+{{{
+...
+executable war setup - Creates an <XXX>-EXECWAR.war executable application. Usage: java -jar <XXX>-EXECWAR.war
+}}}
