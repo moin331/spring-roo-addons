@@ -1,0 +1,32 @@
+#summary How to to install the http-proxy with Roo 1.1.0.M3 shell
+
+===How to install http-proxy Spring Roo Addon===
+
+ * Uninstall the older addon versions
+{{{
+  roo> osgi uninstall --bundleSymbolicName net.tzolov.http.servletproxy.roo.addon
+}}}
+ * Install the addon directly from the googlecode site
+{{{ 
+  roo> felix shell start http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.http.servletproxy.roo.addon-0.1.2-SNAPSHOT.jar
+}}}
+  Alternatively you can download the [http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.http.servletproxy.roo.addon-0.1.2-SNAPSHOT.jar net.tzolov.http.servletproxy.roo.addon] and install it from your local folder:
+{{{
+  roo> felix shell start file:/<absolute path>/net.tzolov.http.servletproxy.roo.addon-0.1.2-SNAPSHOT.jar
+}}}
+ * Verify the installation:
+{{{
+  roo> osgi ps 
+}}}
+ * You should see something like:
+{{{
+[  90] [Active     ] [    1] net.tzolov.http.servletproxy.roo.addon (0.1.2.SNAPSHOT)
+}}}
+ * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
+{{{
+roo> help http-proxy
+* http-proxy add - Add new ServletProxy configuration
+* http-proxy cleanAll - Remove all existing ServletProxy configurations
+* http-proxy list - Shows the existing ServletProxy configurations
+* http-proxy remove - Remove an existing ServletProxy configuration
+}}}
