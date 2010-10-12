@@ -8,9 +8,9 @@
 }}}
  * Install the addon directly from the googlecode site
 {{{ 
-  roo> felix shell start http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.http.servletproxy.roo.addon-0.1.2-SNAPSHOT.jar
+  roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.http.servletproxy.roo.addon-0.1.2-SNAPSHOT.jar
 }}}
-  Alternatively you can download the [http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.http.servletproxy.roo.addon-0.1.2-SNAPSHOT.jar net.tzolov.http.servletproxy.roo.addon] and install it from your local folder:
+  Alternatively you can download the http://spring-roo-addons.googlecode.com/files/net.tzolov.http.servletproxy.roo.addon-0.1.2-SNAPSHOT.jar net.tzolov.http.servletproxy.roo.addon] and install it from your local folder:
 {{{
   roo> felix shell start file:/<absolute path>/net.tzolov.http.servletproxy.roo.addon-0.1.2-SNAPSHOT.jar
 }}}
