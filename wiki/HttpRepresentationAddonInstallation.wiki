@@ -1,4 +1,4 @@
-#summary How to to install the http-representations with Roo 1.1.0.M3
+#summary How to to install the http-representations with Roo 1.1.0
 #labels Phase-Deploy
 
 ===How to install the http-representations Spring Roo Addon===
@@ -9,11 +9,11 @@
 }}}
  * Install the addon directly from the googlecode site:
 {{{ 
-roo> felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar 
+roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar 
 }}}
    or download the [http://code.google.com/p/spring-roo-addons/downloads/detail?name=net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar httprepresentations.roo.addon] and install it locally:
 {{{
-  roo> felix shell start file:/<absolute path>/net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar
+  roo> osgi start --url file:/<absolute path>/net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar
 }}}
 
  * Verify the installation:
