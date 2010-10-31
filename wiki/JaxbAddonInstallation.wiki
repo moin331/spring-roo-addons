@@ -1,4 +1,4 @@
-#summary How to to install the jaxb-addon with Roo 1.1.0.M3 shell
+#summary How to to install the jaxb-addon with Roo 1.1.0 shell
 #labels Phase-Deploy
 
 ===How to install jaxb-addon Spring Roo Addon===
