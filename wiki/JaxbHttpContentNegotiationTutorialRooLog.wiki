@@ -10,8 +10,8 @@ osgi uninstall --bundleSymbolicName net.tzolov.httprepresentations.roo.addon
 
 Install the required addons
 {{{
-felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar 
-felix shell start http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar 
+osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar 
+osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.2-SNAPSHOT.jar 
 }}}
 
 
