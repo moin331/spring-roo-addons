@@ -1,4 +1,4 @@
-#summary Annotated roo.log for the 1.1.0.M3 version of the  http://tzolov.blogspot.com/2010/05/spring-roo-addons-jaxb2-binding-and.html blog entry.
+#summary Annotated roo.log for the Roo-1.1.0 version of the  http://tzolov.blogspot.com/2010/05/spring-roo-addons-jaxb2-binding-and.html blog entry.
 
 === Tutorial Roo Log ===
 
