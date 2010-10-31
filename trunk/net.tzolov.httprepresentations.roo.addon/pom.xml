@@ -4,10 +4,10 @@
 	<groupId>net.tzolov.httprepresentations.roo.addon</groupId>
 	<artifactId>net.tzolov.httprepresentations.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.1.2-SNAPSHOT</version>
+	<version>1.1.3-SNAPSHOT</version>
 	<name>net.tzolov.httprepresentations.roo.addon</name>
 	<properties>
-		<roo.version>1.1.0.M3</roo.version>
+		<roo.version>1.1.0.RELEASE</roo.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -40,6 +40,12 @@
 			<name>Spring Framework Maven Repository - Nightly Snapshots</name>
 			<url>http://maven.springframework.org/milestone</url>
 		</repository>
+
+       <repository>
+            <id>spring-roo-repository</id>
+            <name>Spring Roo Repository</name>
+            <url>http://spring-roo-repository.springsource.org/release</url>
+        </repository>	
 	</repositories>
 	<dependencies>
 	      <!-- OSGi -->
