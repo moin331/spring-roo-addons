@@ -10,7 +10,7 @@ osgi uninstall --bundleSymbolicName net.tzolov.httprepresentations.roo.addon
 
 Install the required addons
 {{{
-osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar 
+osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.3-SNAPSHOT.jar 
 osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-1.1.3-SNAPSHOT.jar 
 }}}
 
@@ -22,7 +22,7 @@ osgi ps
 Amongst the other you should see the following addons installed.
 {{{
 ...
-[  56] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.2.SNAPSHOT)
+[  56] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.3.SNAPSHOT)
 [  57] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.3.SNAPSHOT)
 }}}
 
