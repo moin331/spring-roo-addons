@@ -5,10 +5,11 @@
   <artifactId>net.tzolov.jaxb.roo.addon</artifactId>
   <version>1.1.4</version>
   <versioning>
-    <release>1.1.4</release>
+    <release>1.1.5-SNAPSHOT</release>
     <versions>
       <version>1.1.4</version>
+      <version>1.1.5-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20101106010905</lastUpdated>
+    <lastUpdated>20101106012552</lastUpdated>
   </versioning>
 </metadata>
