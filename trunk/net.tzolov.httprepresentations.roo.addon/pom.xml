@@ -116,9 +116,9 @@
 		</dependency>		
 	</dependencies>
 	<scm>
-		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jaxb.roo.addon</connection>
-		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jaxb.roo.addon</developerConnection>
-		<url>http://code.google.com/p/spring-roo-addons/source/browse/net.tzolov.jaxb.roo.addon</url>
+		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/${project.name}</connection>
+		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/${project.name}</developerConnection>
+		<url>http://code.google.com/p/spring-roo-addons/source/browse/${project.name}</url>
 	</scm>
 	<distributionManagement>
 		<repository>
