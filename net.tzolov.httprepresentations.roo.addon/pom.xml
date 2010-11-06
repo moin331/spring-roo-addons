@@ -4,7 +4,7 @@
 	<groupId>net.tzolov.httprepresentations.roo.addon</groupId>
 	<artifactId>net.tzolov.httprepresentations.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.1.4</version>
+	<version>1.1.5-SNAPSHOT</version>
 	<name>net.tzolov.httprepresentations.roo.addon</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net) </name>
@@ -116,9 +116,9 @@
 		</dependency>		
 	</dependencies>
 	<scm>
-		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/tags/net.tzolov.httprepresentations.roo.addon-1.1.4</connection>
-		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/tags/net.tzolov.httprepresentations.roo.addon-1.1.4</developerConnection>
-		<url>http://code.google.com/p/spring-roo-addons/source/browse/net.tzolov.jaxb.roo.addon/tags/net.tzolov.httprepresentations.roo.addon-1.1.4</url>
+		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jaxb.roo.addon</connection>
+		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jaxb.roo.addon</developerConnection>
+		<url>http://code.google.com/p/spring-roo-addons/source/browse/net.tzolov.jaxb.roo.addon</url>
 	</scm>
 	<distributionManagement>
 		<repository>
