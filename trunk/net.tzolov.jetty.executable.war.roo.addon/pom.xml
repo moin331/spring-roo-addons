@@ -27,7 +27,7 @@
 	<properties>
 		<roo.version>1.1.0.RELEASE</roo.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<google.code.project.name>${project.name}</google.code.project.name>
+		<google.code.project.name>spring-roo-addons</google.code.project.name>
 		<repo.folder>net/tzolov/jetty/executable/war/roo/addon</repo.folder>
 	</properties>
 	<repositories>
