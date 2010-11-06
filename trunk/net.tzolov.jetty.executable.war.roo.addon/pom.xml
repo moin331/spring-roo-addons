@@ -4,7 +4,7 @@
 	<groupId>net.tzolov.jetty.executable.war.roo.addon</groupId>
 	<artifactId>net.tzolov.jetty.executable.war.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.1.3-SNAPSHOT</version>
+	<version>0.1.2-SNAPSHOT</version>
 	<name>net.tzolov.jetty.executable.war.roo.addon</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net) </name>
