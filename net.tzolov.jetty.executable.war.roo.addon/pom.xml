@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.tzolov.jetty.executable.war.roo.addon</groupId>
 	<artifactId>net.tzolov.jetty.executable.war.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.1.2.BUILD-SNAPSHOT</version>
+	<version>0.1.1.BUILD-SNAPSHOT</version>
 	<name>net.tzolov.jetty.executable.war.roo.addon</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net) </name>
@@ -115,9 +116,9 @@
 
 	</dependencies>
 	<scm>
-		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jetty.executable.war.roo.addon</connection>
-		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jetty.executable.war.roo.addon</developerConnection>
-		<url>http://code.google.com/p/spring-roo-addons/source/browse/net.tzolov.jetty.executable.war.roo.addon</url>
+		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/${project.name}</connection>
+		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/${project.name}</developerConnection>
+		<url>http://code.google.com/p/spring-roo-addons/source/browse/${project.name}</url>
 	</scm>
 	<distributionManagement>
 		<repository>
