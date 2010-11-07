@@ -1,6 +1,6 @@
 #summary How to to install the addons using the RooBot central repository
 
-===Mark the (Christian Tzolov) signature trusted===
+===Indicate that the (Christian Tzolov) signature is trusted===
 This is necessary if you are to install addons singed with this signature
 {{{
 roo> pgp trust --keyId 0xACB27429
