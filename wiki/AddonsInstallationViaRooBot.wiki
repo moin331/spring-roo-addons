@@ -16,10 +16,10 @@ Amongst others you should see the jaxb, httprepresentations, executable.war and 
 ===Install an addon from the RooBot repository ===
 
 {{{
-addon install --bundleSymbolicName net.tzolov.jaxb.roo.addon
-addon install --bundleSymbolicName net.tzolov.httprepresentations.roo.addon
-addon install --bundleSymbolicName net.tzolov.jetty.executable.war.roo.addon
-addon install --bundleSymbolicName net.tzolov.http.servletproxy.roo.addon
+roo> addon install --bundleSymbolicName net.tzolov.jaxb.roo.addon
+roo> addon install --bundleSymbolicName net.tzolov.httprepresentations.roo.addon
+roo> addon install --bundleSymbolicName net.tzolov.jetty.executable.war.roo.addon
+roo> addon install --bundleSymbolicName net.tzolov.http.servletproxy.roo.addon
 }}}
 
 Then if you perform 'osgi ps' you should seed the following entries in the outpu:
