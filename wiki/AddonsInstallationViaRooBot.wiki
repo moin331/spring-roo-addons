@@ -11,7 +11,7 @@ roo> pgp trust --keyId 0xACB27429
 roo> addon list
 }}}
 
-Amongst others you should see the jaxb, httprepresentations, executable.war and the servletproxy addons. 
+Amongst all addons you will see the *jaxb*, *httprepresentations*, *executable-war* and the *servletproxy* addons. 
 
 ===Install an addon from the RooBot repository ===
 
