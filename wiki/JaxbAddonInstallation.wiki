@@ -7,13 +7,13 @@
 {{{
   roo> osgi uninstall --bundleSymbolicName net.tzolov.jaxb.roo.addon
 }}}
- * Install the addon directly from the googlecode site
-{{{ 
-  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.3-SNAPSHOT.jar 
-}}}
-  Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.3-SNAPSHOT.jar jaxb.roo.addon] and install it from your local folder:
+ * Install the addon from the RooBot central addon repostiory 
 {{{
-  roo> osgi start --url file:/<absolute path>/net.tzolov.jaxb.roo.addon-1.1.3-SNAPSHOT.jar
+  roo> addon install --bundleSymbolicName net.tzolov.jaxb.roo.addon
+}}}
+  Alternatively you can install it directly from the googlecode site:
+{{{ 
+  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.4.jar 
 }}}
  * Verify the installation:
 {{{
@@ -22,7 +22,7 @@
  * You should see something like:
 {{{
 ...
-[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.3.SNAPSHOT)
+[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.4)
 }}}
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
