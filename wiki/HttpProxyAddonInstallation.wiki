@@ -6,7 +6,7 @@
 {{{
   roo> osgi uninstall --bundleSymbolicName net.tzolov.http.servletproxy.roo.addon
 }}}
-  * Install the addon from the central OBR repostiory (RooBot)
+ * Install the addon from the central OBR repostiory (RooBot)
 {{{
   roo> addon install --bundleSymbolicName net.tzolov.http.servletproxy.roo.addon
 }}} 
