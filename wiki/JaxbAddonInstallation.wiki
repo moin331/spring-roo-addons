@@ -7,7 +7,7 @@
 {{{
   roo> osgi uninstall --bundleSymbolicName net.tzolov.jaxb.roo.addon
 }}}
- * Install the addon from the RooBot central addon repostiory 
+ * Install the addon from the Central addon repostiory (RooBot)
 {{{
   roo> addon install --bundleSymbolicName net.tzolov.jaxb.roo.addon
 }}}
