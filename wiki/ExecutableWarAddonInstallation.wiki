@@ -6,13 +6,15 @@
 {{{
   roo> osgi uninstall --bundleSymbolicName net.tzolov.jetty.executable.war.roo.addon
 }}}
- * Install the addon directly from the googlecode site
-{{{ 
-  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar
-}}}
-  Alternatively you can download the [http://spring-roo-addons.googlecode.com/files/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar executable.war.roo.addon] and install it from your local folder:
+ * Install the addon from the central OBR repostiory (RooBot)
 {{{
-  roo> osgi start --url file:/<absolute path>/net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar
+  roo> addon install --bundleSymbolicName net.tzolov.jetty.executable.war.roo.addon
+}}} 
+  The first time you would need to approve the signature: *roo> pgp trust --keyId 0xACB27429 *
+
+  Alternatively you can install it directly from the googlecode site:
+{{{ 
+  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jetty.executable.war.roo.addon-0.1.2.jar 
 }}}
  * Verify the installation:
 {{{
@@ -21,7 +23,7 @@
  * You should see something like:
 {{{
 ...
-[  60] [Active     ] [    1] net-tzolov-jetty-executable-war-roo-addon (0.1.0.BUILD-SNAPSHOT)
+[  60] [Active     ] [    1] net-tzolov-jetty-executable-war-roo-addon (0.1.2)
 }}}
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
