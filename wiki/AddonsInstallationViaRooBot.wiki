@@ -1,0 +1,32 @@
+#summary How to to install the addons using the RooBot central repository
+
+===Mark the Christian Tzolov pgp signature as trusted===
+{{{
+roo> pgp trust --keyId 0xACB27429
+}}}
+
+===List all available addons registered in RooBot ===
+{{{
+roo> addon list
+}}}
+
+Amongst others you should see the jaxb, httprepresentations, executable.war and the servletproxy addons. 
+
+===Install an addon from the RooBot repository ===
+
+{{{
+addon install --bundleSymbolicName net.tzolov.jaxb.roo.addon
+addon install --bundleSymbolicName net.tzolov.httprepresentations.roo.addon
+addon install --bundleSymbolicName net.tzolov.jetty.executable.war.roo.addon
+addon install --bundleSymbolicName net.tzolov.http.servletproxy.roo.addon
+}}}
+
+Then if you perform 'osgi ps' you should seed the following entries in the outpu:
+{{{
+...
+[  75] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.4)
+[  76] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.4)
+[  77] [Active     ] [    1] net.tzolov.jetty.executable.war.roo.addon (0.1.2)
+[  78] [Active     ] [    1] net.tzolov.http.servletproxy.roo.addon (0.1.3)
+...
+}}}
