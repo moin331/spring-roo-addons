@@ -28,5 +28,5 @@
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
 ...
-executable war setup - Creates an <XXX>-EXECWAR.war executable application. Usage: java -jar <XXX>-EXECWAR.war
+executable war setup - Creates an <Your Project Name>-EXECWAR.war executable application. Usage: java -jar <Your Project Name>-EXECWAR.war
 }}}
