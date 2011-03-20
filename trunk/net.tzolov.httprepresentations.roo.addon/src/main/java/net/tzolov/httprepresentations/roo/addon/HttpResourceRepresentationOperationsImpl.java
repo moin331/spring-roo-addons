@@ -161,7 +161,7 @@ public class HttpResourceRepresentationOperationsImpl implements HttpResourceRep
 
 		for (Element dependencyElement : databaseDependencies) {
 			projectOperations
-					.dependencyUpdate(new Dependency(dependencyElement));
+					.addDependency(new Dependency(dependencyElement));
 		}
 	}
 

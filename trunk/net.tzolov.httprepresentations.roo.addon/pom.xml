@@ -5,7 +5,7 @@
 	<artifactId>net.tzolov.httprepresentations.roo.addon</artifactId>
 	<packaging>bundle</packaging>
 	<version>1.1.7-SNAPSHOT</version>
-	<name>net.tzolov.httprepresentations.roo.addon</name>
+	<name>Spring Roo - HTTP Content Negotiating Resolver</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net) </name>
 	</organization>	
@@ -26,7 +26,7 @@
 	<url>http://code.google.com/p/spring-roo-addons/</url>
 	
 	<properties>
-		<roo.version>1.1.0.RELEASE</roo.version>
+		<roo.version>1.1.2.RELEASE</roo.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<google.code.project.name>spring-roo-addons</google.code.project.name>
 		<repo.folder>net/tzolov/httprepresentations/roo/addon</repo.folder>
