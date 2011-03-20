@@ -1,6 +1,6 @@
 #summary How to to install the executable-war-addon with Roo 1.1.x shell
 
-===How to install executable-war-addon Spring Roo Addon===
+===How to install executable-war-addon Spring Roo Addon (latest version: 0.1.3) ===
 
  * Uninstall the older addon versions
 {{{
