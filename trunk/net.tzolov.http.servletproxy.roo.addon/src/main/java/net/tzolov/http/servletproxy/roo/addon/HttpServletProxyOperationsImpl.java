@@ -131,7 +131,7 @@ public class HttpServletProxyOperationsImpl implements
 		List<Element> dependencies = XmlUtils.findElements(
 				"/configuration/dependencies/dependency", configuration);
 		for (Element dependency : dependencies) {
-			projectOperations.dependencyUpdate(new Dependency(dependency));
+			projectOperations.addDependency(new Dependency(dependency));
 		}
 
 		// Add repository
