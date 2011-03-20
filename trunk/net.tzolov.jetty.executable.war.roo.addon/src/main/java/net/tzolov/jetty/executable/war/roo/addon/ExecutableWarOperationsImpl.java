@@ -156,7 +156,7 @@ public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 						configuration);
 
 		for (Element xmlDependecy : xmlDependencies) {
-			projectOperations.dependencyUpdate(new Dependency(xmlDependecy));
+			projectOperations.addDependency(new Dependency(xmlDependecy));
 		}
 	}
 
