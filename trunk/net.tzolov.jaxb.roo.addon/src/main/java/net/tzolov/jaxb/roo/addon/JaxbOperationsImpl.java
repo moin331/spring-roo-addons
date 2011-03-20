@@ -95,8 +95,7 @@ public class JaxbOperationsImpl implements JaxbOperations {
 				"/configuration/jaxb/dependencies/dependency", configuration);
 
 		for (Element dependencyElement : databaseDependencies) {
-			projectOperations
-					.dependencyUpdate(new Dependency(dependencyElement));
+			projectOperations.addDependency(new Dependency(dependencyElement));
 		}
 	}
 
