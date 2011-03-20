@@ -1,7 +1,7 @@
-#summary How to to install the jaxb-addon with Roo 1.1.0 shell
+#summary How to to install the jaxb-addon with Roo 1.1.2 shell
 #labels Phase-Deploy
 
-===How to install jaxb-addon Spring Roo Addon===
+===How to install jaxb-addon Spring Roo Addon (latest version: 1.1.5)===
 
  * Uninstall the older addon versions
 {{{
@@ -15,7 +15,7 @@
 
   Alternatively you can install it directly from the googlecode site:
 {{{ 
-  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.4.jar 
+  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.jaxb.roo.addon-1.1.5.jar 
 }}}
  * Verify the installation:
 {{{
@@ -24,7 +24,7 @@
  * You should see something like:
 {{{
 ...
-[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.4)
+[  60] [Active     ] [    1] Spring Roo - JAXB2 Schema complier (1.1.5)
 }}}
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
