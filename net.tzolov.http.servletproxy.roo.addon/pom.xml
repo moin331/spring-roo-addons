@@ -5,7 +5,7 @@
 	<artifactId>net.tzolov.http.servletproxy.roo.addon</artifactId>
 	<packaging>bundle</packaging>
 	<version>0.1.4-SNAPSHOT</version>
-	<name>net.tzolov.http.servletproxy.roo.addon</name>
+	<name>Spring Roo -  Http-Proxy To Allow Cross-Domain Access</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net) </name>
 	</organization>
@@ -27,7 +27,7 @@
 	<url>http://code.google.com/p/spring-roo-addons/</url>
 
 	<properties>
-		<roo.version>1.1.0.RELEASE</roo.version>
+		<roo.version>1.1.2.RELEASE</roo.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<google.code.project.name>spring-roo-addons</google.code.project.name>
 		<repo.folder>net/tzolov/http/servletproxy/roo/addon</repo.folder>
