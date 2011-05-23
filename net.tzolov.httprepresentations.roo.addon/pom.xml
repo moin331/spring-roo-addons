@@ -26,7 +26,7 @@
 	<url>http://code.google.com/p/spring-roo-addons/</url>
 	
 	<properties>
-		<roo.version>1.1.2.RELEASE</roo.version>
+		<roo.version>1.1.4.RELEASE</roo.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<google.code.project.name>spring-roo-addons</google.code.project.name>
 		<repo.folder>net/tzolov/httprepresentations/roo/addon</repo.folder>
@@ -36,7 +36,7 @@
 		<repository>
 			<id>spring-roo-repository</id>
 			<name>Spring Roo Repository</name>
-			<url>http://spring-roo-repository.springsource.org/release</url>
+			<url>http://spring-roo-repository.springsource.org/release</url>			            
 		</repository>
 	</repositories>
 	<pluginRepositories>

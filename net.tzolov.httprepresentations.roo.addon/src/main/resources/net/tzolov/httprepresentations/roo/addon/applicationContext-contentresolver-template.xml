@@ -13,30 +13,44 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 					
 	<!-- JSON Marshaling -->
+	<!-- JSON Marshaling -->
 	<util:constant id="jsonBasicClassIntrospector"
 		static-field="org.codehaus.jackson.map.introspect.BasicClassIntrospector.instance" />
 
-	<bean id="jsonJaxbAnnotationIntrospector" class="org.codehaus.jackson.xc.JaxbAnnotationIntrospector"/>
+	<util:constant id="typeFactory" 
+		static-field="org.codehaus.jackson.map.type.TypeFactory.instance" />
+	
+	<bean class="org.codehaus.jackson.xc.JaxbAnnotationIntrospector"
+		id="jsonJaxbAnnotationIntrospector" />
 
-	<bean id="visibilityChecker" class="org.codehaus.jackson.map.introspect.VisibilityChecker.Std" factory-method="defaultInstance"/>
+	<bean class="org.codehaus.jackson.map.introspect.VisibilityChecker.Std"
+		factory-method="defaultInstance" id="visibilityChecker" />
 
-	<bean id="jsonObjectMapper" class="org.codehaus.jackson.map.ObjectMapper">
+	<bean class="org.codehaus.jackson.map.ObjectMapper" id="jsonObjectMapper">
 		<property name="serializationConfig">
 			<bean class="org.codehaus.jackson.map.SerializationConfig">
-				<constructor-arg ref="jsonBasicClassIntrospector"/>
+				<constructor-arg ref="jsonBasicClassIntrospector" />
 				<constructor-arg ref="jsonJaxbAnnotationIntrospector" />
-				<constructor-arg ref="visibilityChecker"/>				
+				<constructor-arg ref="visibilityChecker" />
+				<constructor-arg><null/></constructor-arg>
+				<constructor-arg><null/></constructor-arg>
+				<constructor-arg ref="typeFactory"/>
+				<constructor-arg><null/></constructor-arg>
 			</bean>
 		</property>
 		<property name="deserializationConfig">
 			<bean class="org.codehaus.jackson.map.DeserializationConfig">
-				<constructor-arg ref="jsonBasicClassIntrospector"/>
+				<constructor-arg ref="jsonBasicClassIntrospector" />
 				<constructor-arg ref="jsonJaxbAnnotationIntrospector" />
-				<constructor-arg ref="visibilityChecker"/>				
+				<constructor-arg ref="visibilityChecker" />
+				<constructor-arg><null/></constructor-arg>
+				<constructor-arg><null/></constructor-arg>
+				<constructor-arg ref="typeFactory"/>
+				<constructor-arg><null/></constructor-arg>				
 			</bean>
 		</property>
 	</bean>
-
+	
 	<!-- XML Marshaling -->
 	<oxm:jaxb2-marshaller id="jaxbMarshaller">
 	</oxm:jaxb2-marshaller>
