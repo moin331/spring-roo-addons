@@ -22,8 +22,8 @@ osgi ps
 Amongst the other you should see the following addons installed.
 {{{
 ...
-[  56] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.4)
-[  57] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.4)
+[  56] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.5)
+[  57] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.8)
 }}}
 
 Create the project and set the persistent layer
@@ -45,6 +45,7 @@ Check whether the org.example.people... classes have been generated in your src/
 
 Create the People controller
 {{{
+web mvc setup
 controller class --class ~.web.PeopleController
 }}}
 
