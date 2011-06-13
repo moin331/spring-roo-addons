@@ -25,9 +25,9 @@ roo> addon install --bundleSymbolicName net.tzolov.http.servletproxy.roo.addon
 Then if you perform 'osgi ps' you should seed the following entries in the outpu:
 {{{
 ...
-[  75] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.5)
+[  75] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.6)
 [  76] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.8)
-[  77] [Active     ] [    1] net.tzolov.jetty.executable.war.roo.addon (0.1.2)
-[  78] [Active     ] [    1] net.tzolov.http.servletproxy.roo.addon (0.1.3)
+[  77] [Active     ] [    1] net.tzolov.jetty.executable.war.roo.addon (1.0.0)
+[  78] [Active     ] [    1] net.tzolov.http.servletproxy.roo.addon (0.1.4)
 ...
 }}}
