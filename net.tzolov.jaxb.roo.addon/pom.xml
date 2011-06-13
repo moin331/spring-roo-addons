@@ -4,7 +4,7 @@
 	<groupId>net.tzolov.jaxb.roo.addon</groupId>
 	<artifactId>net.tzolov.jaxb.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.1.6</version>
+	<version>1.1.7-SNAPSHOT</version>
 	<name>Spring Roo - JAXB2 Schema complier</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net) </name>
@@ -108,9 +108,9 @@
 		</dependency>
 	</dependencies>
 	<scm>
-		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/tags/net.tzolov.jaxb.roo.addon-1.1.6</connection>
-		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/tags/net.tzolov.jaxb.roo.addon-1.1.6</developerConnection>
-		<url>http://code.google.com/p/spring-roo-addons/source/browse/net.tzolov.jaxb.roo.addon/tags/net.tzolov.jaxb.roo.addon-1.1.6</url>
+		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jaxb.roo.addon</connection>
+		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jaxb.roo.addon</developerConnection>
+		<url>http://code.google.com/p/spring-roo-addons/source/browse/net.tzolov.jaxb.roo.addon</url>
 	</scm>
 	<distributionManagement>
 		<repository>
