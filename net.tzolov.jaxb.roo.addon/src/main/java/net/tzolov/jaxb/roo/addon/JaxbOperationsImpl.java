@@ -116,8 +116,6 @@ public class JaxbOperationsImpl implements JaxbOperations {
 
 			}
 			
-			System.out.println("update plugins:" + buildPlugin.toString());
-
 			projectOperations.updateBuildPlugin(buildPlugin);
 		}
 	}
