@@ -12,7 +12,6 @@ import org.osgi.service.component.ComponentContext;
 import org.springframework.roo.metadata.MetadataService;
 import org.springframework.roo.model.JavaPackage;
 import org.springframework.roo.process.manager.FileManager;
-import org.springframework.roo.process.manager.MutableFile;
 import org.springframework.roo.project.Dependency;
 import org.springframework.roo.project.Path;
 import org.springframework.roo.project.PathResolver;
@@ -23,7 +22,6 @@ import org.springframework.roo.support.util.Assert;
 import org.springframework.roo.support.util.FileCopyUtils;
 import org.springframework.roo.support.util.TemplateUtils;
 import org.springframework.roo.support.util.XmlUtils;
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
@@ -81,19 +79,21 @@ public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 
 		logger.info("Install Executable War!");
 
+		projectOperations.removeBuildPlugin(new Plugin("org.apache.maven.plugins", "maven-assembly-plugin", "2.2.1"));
+		
 		// Parse the configuration.xml file
 		Element configurationXml = XmlUtils.getConfiguration(getClass());
 
 		// Add dependencies to POM
 		updateDependencies(configurationXml);
-
+		
 		// Update plugins from the configuration file (note: only plugin's
 		// definition is performed here. The configuration setup is performed
 		// below
 		updateBuildPlugins(configurationXml);
 
 		// Create an assembly plugin or update its configuration
-		updateAssemblyPluginConfiguration();
+		// updateAssemblyPluginConfiguration();
 
 		// Copy the execwar.xml template
 		copyTemplate(Path.SRC_MAIN_RESOURCES, EXECWAR_XML, EXECWAR_TEMPLATE_XML);
@@ -166,100 +166,30 @@ public class ExecutableWarOperationsImpl implements ExecutableWarOperations {
 				"/configuration/execwar/build/plugins/plugin", configuration);
 
 		for (Element xmlPlugin : xmlPlugins) {
-			projectOperations.buildPluginUpdate(new Plugin(xmlPlugin));
+			Plugin buildPlugin = new Plugin(xmlPlugin);
+
+			if (buildPlugin.getArtifactId().equals("maven-assembly-plugin")) {
+
+				projectOperations.removeBuildPlugin(buildPlugin);
+				
+				Element conf = buildPlugin.getConfiguration()
+						.getConfiguration();
+				Element mainClass = XmlUtils.findFirstElement(
+						"archive/manifest/mainClass", conf);
+				Assert.notNull(
+						mainClass,
+						"plugin[artifactId='maven-assembly-plugin']/configuration/archive/manifest/mainClass unable to be found");
+				JavaPackage topLevelPackage = getProjectMethadata()
+						.getTopLevelPackage();
+
+				mainClass.setTextContent(topLevelPackage
+						.getFullyQualifiedPackageName() + ".ExecWar");
+			}
+
+			projectOperations.updateBuildPlugin(buildPlugin);
+
 		}
 	}
 
-	private void updateAssemblyPluginConfiguration() {
 
-		String pom = pathResolver.getIdentifier(Path.ROOT, "/pom.xml");
-
-		MutableFile mutableFile = fileManager.updateFile(pom);
-
-		try {
-			Document document = XmlUtils.getDocumentBuilder().parse(
-					mutableFile.getInputStream());
-
-			Element pluginConfiguration = XmlUtils
-					.findFirstElement(
-							"//plugin[artifactId='maven-assembly-plugin']/configuration",
-							(Element) document.getFirstChild());
-
-			Assert.notNull(pluginConfiguration,
-					"plugin[artifactId='maven-assembly-plugin']/configuration unable to be found");
-
-			// Add schemaDirectory if set
-			Element finalName = document.createElement("finalName");
-			finalName.setTextContent("${artifactId}-${version}");
-			pluginConfiguration.appendChild(finalName);
-
-			Element appendAssemblyId = document
-					.createElement("appendAssemblyId");
-			appendAssemblyId.setTextContent("true");
-			pluginConfiguration.appendChild(appendAssemblyId);
-
-			Element useProjectArtifact = document
-					.createElement("useProjectArtifact");
-			useProjectArtifact.setTextContent("false");
-			pluginConfiguration.appendChild(useProjectArtifact);
-
-			Element outputDirectory = document.createElement("outputDirectory");
-			outputDirectory.setTextContent("target");
-			pluginConfiguration.appendChild(useProjectArtifact);
-
-			Element descriptors = document.createElement("descriptors");
-			Element descriptor = document.createElement("descriptor");
-			descriptor.setTextContent("src/main/resources/execwar.xml");
-			descriptors.appendChild(descriptor);
-			pluginConfiguration.appendChild(descriptors);
-
-			Element archive = document.createElement("archive");
-			Element manifest = document.createElement("manifest");
-			Element mainClass = document.createElement("mainClass");
-
-			JavaPackage topLevelPackage = getProjectMethadata()
-					.getTopLevelPackage();
-
-			mainClass.setTextContent(topLevelPackage
-					.getFullyQualifiedPackageName() + ".ExecWar");
-			manifest.appendChild(mainClass);
-			archive.appendChild(manifest);
-			pluginConfiguration.appendChild(archive);
-
-			XmlUtils.writeXml(mutableFile.getOutputStream(), document);
-
-		} catch (Exception ex) {
-			throw new IllegalStateException("Could not open POM '" + pom + "'",
-					ex);
-		}
-	}
-
-/*	private Element createMavenAssemblyPluginConfiguration(Document document) {
-
-		Element plugin = document.createElement("plugin");
-
-		Element groupId = document.createElement("groupId");
-		groupId.setTextContent("org.apache.maven.plugins");
-		plugin.appendChild(groupId);
-
-		Element artifactId = document.createElement("artifactId");
-		artifactId.setTextContent("maven-assembly-plugin");
-		plugin.appendChild(artifactId);
-
-		Element version = document.createElement("version");
-		version.setTextContent("2.2-beta-5");
-		plugin.appendChild(version);
-
-		Element configuration = document.createElement("configuration");
-		plugin.appendChild(configuration);
-
-		Element plugins = XmlUtils.findFirstElement("//plugins",
-				(Element) document.getFirstChild());
-
-		Assert.notNull(plugins, "Failed to resolve the plugions section");
-
-		plugins.appendChild(plugin);
-
-		return configuration;
-	} */
 }
