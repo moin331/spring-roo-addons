@@ -24,7 +24,7 @@
 	<url>http://code.google.com/p/spring-roo-addons/</url>
 
 	<properties>
-		<roo.version>1.1.2.RELEASE</roo.version>
+		<roo.version>1.1.4.RELEASE</roo.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<google.code.project.name>spring-roo-addons</google.code.project.name>
 		<repo.folder>net/tzolov/jaxb/roo/addon</repo.folder>

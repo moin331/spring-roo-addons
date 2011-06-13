@@ -7,18 +7,12 @@ import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.osgi.service.component.ComponentContext;
 import org.springframework.roo.metadata.MetadataService;
-import org.springframework.roo.process.manager.FileManager;
-import org.springframework.roo.process.manager.MutableFile;
 import org.springframework.roo.project.Dependency;
-import org.springframework.roo.project.Path;
-import org.springframework.roo.project.PathResolver;
 import org.springframework.roo.project.Plugin;
 import org.springframework.roo.project.ProjectMetadata;
 import org.springframework.roo.project.ProjectOperations;
 import org.springframework.roo.project.Repository;
-import org.springframework.roo.support.util.Assert;
 import org.springframework.roo.support.util.XmlUtils;
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
@@ -30,10 +24,6 @@ import org.w3c.dom.Element;
 @Service
 public class JaxbOperationsImpl implements JaxbOperations {
 
-	@Reference
-	private FileManager fileManager;
-	@Reference
-	private PathResolver pathResolver;
 	@Reference
 	private MetadataService metadataService;
 	@Reference
@@ -58,7 +48,7 @@ public class JaxbOperationsImpl implements JaxbOperations {
 		// JAXB2 build plugin installed
 		return project.getBuildPluginsExcludingVersion(
 				new Plugin("org.jvnet.jaxb2.maven2", "maven-jaxb2-plugin",
-						"0.7.3")).size() == 0;
+						"0.7.4")).size() == 0;
 	}
 
 	public void installJaxbSchemaCompiler(String schemaDirectory,
@@ -77,9 +67,7 @@ public class JaxbOperationsImpl implements JaxbOperations {
 		updateMavenPluginRepository(configuration);
 
 		// Add build plugins to POM
-		updateBuildPlugins(configuration);
-
-		updateBuildPluginConfiguration(schemaDirectory, generateDirectory);
+		updateBuildPlugins(configuration, schemaDirectory, generateDirectory);
 	}
 
 	private boolean hasText(String text) {
@@ -99,72 +87,38 @@ public class JaxbOperationsImpl implements JaxbOperations {
 		}
 	}
 
-	private void updateBuildPlugins(Element configuration) {
+	private void updateBuildPlugins(Element configuration,
+			String schemaDirectory, String generateDirectory) {
 
 		List<Element> databasePlugins = XmlUtils.findElements(
 				"/configuration/jaxb/build/plugins/plugin", configuration);
 
 		for (Element pluginElement : databasePlugins) {
 			Plugin buildPlugin = new Plugin(pluginElement);
-			projectOperations.buildPluginUpdate(buildPlugin);
-		}
-	}
-
-	private void updateBuildPluginConfiguration(String schemaDirectory,
-			String generateDirectory) {
-
-		// Set the src/main/java as generate output directory fro the
-		// JAXB_MAVEN_BUILD_PLUGIN build plugin
-		if (hasText(generateDirectory) || hasText(schemaDirectory)) {
-
-			String pom = pathResolver.getIdentifier(Path.ROOT, "/pom.xml");
-
-			MutableFile mutableFile = fileManager.updateFile(pom);
-
-			try {
-				Document document = XmlUtils.getDocumentBuilder().parse(
-						mutableFile.getInputStream());
-
-				Element jaxb2BuildExecution = XmlUtils
-						.findFirstElement(
-								"//plugin[groupId='org.jvnet.jaxb2.maven2']/executions/execution",
-								(Element) document.getFirstChild());
-
-				Assert.notNull(jaxb2BuildExecution,
-						"jaxb2BuildExecution unable to be found");
-
-				Element jaxb2BuildExecutionConfiguration = document
-						.createElement("configuration");
-
-				// Add schemaDirectory if set
+			
+			if ((hasText(generateDirectory) || hasText(schemaDirectory))
+					&& buildPlugin.getArtifactId().equals("maven-jaxb2-plugin")) {
+				
+				Element pluginConfigurationElement = buildPlugin
+						.getConfiguration().getConfiguration();
+				
 				if (hasText(schemaDirectory)) {
-					Element jaxb2BuildExecutionConfigurationSchemaDirectory = document
-							.createElement("schemaDirectory");
-					jaxb2BuildExecutionConfigurationSchemaDirectory
-							.setTextContent(schemaDirectory);
-					jaxb2BuildExecutionConfiguration
-							.appendChild(jaxb2BuildExecutionConfigurationSchemaDirectory);
+					XmlUtils.findFirstElement("schemaDirectory",
+							pluginConfigurationElement).setTextContent(
+							schemaDirectory);
 				}
 
-				// Add generateDirectory if set
 				if (hasText(generateDirectory)) {
-					Element jaxb2BuildExecutionConfigurationGenerateDirectory = document
-							.createElement("generateDirectory");
-					jaxb2BuildExecutionConfigurationGenerateDirectory
-							.setTextContent(generateDirectory);
-					jaxb2BuildExecutionConfiguration
-							.appendChild(jaxb2BuildExecutionConfigurationGenerateDirectory);
+					XmlUtils.findFirstElement("generateDirectory",
+							pluginConfigurationElement).setTextContent(
+							generateDirectory);
 				}
 
-				jaxb2BuildExecution
-						.appendChild(jaxb2BuildExecutionConfiguration);
-
-				XmlUtils.writeXml(mutableFile.getOutputStream(), document);
-
-			} catch (Exception ex) {
-				throw new IllegalStateException("Could not open POM '" + pom
-						+ "'", ex);
 			}
+			
+			System.out.println("update plugins:" + buildPlugin.toString());
+
+			projectOperations.updateBuildPlugin(buildPlugin);
 		}
 	}
 
