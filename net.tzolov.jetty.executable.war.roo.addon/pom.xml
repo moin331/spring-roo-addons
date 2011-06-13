@@ -4,7 +4,7 @@
 	<groupId>net.tzolov.jetty.executable.war.roo.addon</groupId>
 	<artifactId>net.tzolov.jetty.executable.war.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.1.4-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>Spring Roo - Executable War</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net) </name>
