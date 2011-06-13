@@ -14,13 +14,28 @@
 			</dependency>
 		</dependencies>
 
- 		<build>
+		<build>
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>2.2-beta-5</version>
-					<configuration></configuration>
+					<version>2.2.1</version>
+					<configuration>
+						<descriptorRefs>
+							<descriptorRef>jar-with-dependencies</descriptorRef>
+						</descriptorRefs>
+						<finalName>${artifactId}-${version}</finalName>
+						<appendAssemblyId>true</appendAssemblyId>
+						<useProjectArtifact>false</useProjectArtifact>
+						<descriptors>
+							<descriptor>src/main/resources/execwar.xml</descriptor>
+						</descriptors>
+						<archive>
+							<manifest>
+								<mainClass>__TOP_LEVEL_PACKAGE__.ExecWar</mainClass>
+							</manifest>
+						</archive>
+					</configuration>
 				</plugin>
 			</plugins>
 		</build>
