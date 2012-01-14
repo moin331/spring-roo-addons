@@ -1,417 +1,453 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<repository lastmodified="20110624182741.067" name="MyRepository">
-<resource id="net.tzolov.httprepresentations.roo.addon/1.1.4" presentationname="net.tzolov.httprepresentations.roo.addon" symbolicname="net.tzolov.httprepresentations.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.4/net.tzolov.httprepresentations.roo.addon-1.1.4.jar" version="1.1.4">
-<description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
-<size>15440</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.4/net.tzolov.httprepresentations.roo.addon-1.1.4-sources.jar.asc</source>
-<javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.4/net.tzolov.httprepresentations.roo.addon-1.1.4-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.httprepresentations.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="symbolicname" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="version" t="version" v="1.1.4"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="uses" v="org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.project,org.springframework.roo.metadata,javax.xml.parsers,org.springframework.roo.classpath,org.w3c.dom,org.springframework.roo.support.util,org.springframework.roo.support.logging,org.springframework.roo.process.manager"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.httprepresentations.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.httprepresentations.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.classpath ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.model ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.logging ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.jaxb.roo.addon/1.1.4" presentationname="net.tzolov.jaxb.roo.addon" symbolicname="net.tzolov.jaxb.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.4/net.tzolov.jaxb.roo.addon-1.1.4.jar" version="1.1.4">
-<description>JAXB2 Schema complier addon. It adds the maven-jaxb2-plugin to your pom.xml. 		The plugin participates in the generate-code phase and produces code of the 		schema-derived classes out of the XML Schemas, DTDs and so on.</description>
-<size>13625</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.4/net.tzolov.jaxb.roo.addon-1.1.4-sources.jar.asc</source>
-<javadoc>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.4/net.tzolov.jaxb.roo.addon-1.1.4-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.jaxb.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="net.tzolov.jaxb.roo.addon"/>
-<p n="symbolicname" v="net.tzolov.jaxb.roo.addon"/>
-<p n="version" t="version" v="1.1.4"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.jaxb.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.support.util,org.springframework.roo.metadata,javax.xml.parsers,org.springframework.roo.process.manager,org.w3c.dom"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.jaxb.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.jaxb.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.http.servletproxy.roo.addon/0.1.3" presentationname="net.tzolov.http.servletproxy.roo.addon" symbolicname="net.tzolov.http.servletproxy.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.3/net.tzolov.http.servletproxy.roo.addon-0.1.3.jar" version="0.1.3">
-<description>The Http-Proxy Addon allows you to configure your web application to 		get around the Same Origin Policy restriction (e.g. cross-domain). 		You can use it to install new servlet proxies (http-proxy add), list 		them (http-proxy list), remove those not needed (http-proxy remove) 		and eventually remove all proxies with a single command 		(http-proxy cleanAll).</description>
-<size>16693</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.3/net.tzolov.http.servletproxy.roo.addon-0.1.3-sources.jar.asc</source>
-<javadoc>net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.3/net.tzolov.http.servletproxy.roo.addon-0.1.3-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.http.servletproxy.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="net.tzolov.http.servletproxy.roo.addon"/>
-<p n="symbolicname" v="net.tzolov.http.servletproxy.roo.addon"/>
-<p n="version" t="version" v="0.1.3"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.http.servletproxy.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.w3c.dom,org.springframework.roo.process.manager,org.springframework.roo.project,org.springframework.roo.support.util,org.springframework.roo.metadata,javax.xml.parsers,org.osgi.service.component"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.http.servletproxy.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.http.servletproxy.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.jetty.executable.war.roo.addon/0.1.2" presentationname="net.tzolov.jetty.executable.war.roo.addon" symbolicname="net.tzolov.jetty.executable.war.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.2/net.tzolov.jetty.executable.war.roo.addon-0.1.2.jar" version="0.1.2">
-<description>The Executable WAR Addon configures the Maven project to makes it 		possible to create web applications that can be run from the command 		line (java -jar your-application.war) or deployed in a container. 		When run from the command line the executable-war starts an embedded 		Jetty webserver that in turn hosts the webapp contained in the war.</description>
-<size>14288</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.2/net.tzolov.jetty.executable.war.roo.addon-0.1.2-sources.jar.asc</source>
-<javadoc>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.2/net.tzolov.jetty.executable.war.roo.addon-0.1.2-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.jetty.executable.war.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="net.tzolov.jetty.executable.war.roo.addon"/>
-<p n="symbolicname" v="net.tzolov.jetty.executable.war.roo.addon"/>
-<p n="version" t="version" v="0.1.2"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.jetty.executable.war.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.springframework.roo.model,org.springframework.roo.project,org.springframework.roo.metadata,javax.xml.parsers,org.w3c.dom,org.osgi.service.component,org.springframework.roo.support.util,org.springframework.roo.process.manager"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.jetty.executable.war.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.jetty.executable.war.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.model ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.httprepresentations.roo.addon/1.1.5" presentationname="net.tzolov.httprepresentations.roo.addon" symbolicname="net.tzolov.httprepresentations.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.5/net.tzolov.httprepresentations.roo.addon-1.1.5.jar" version="1.1.5">
-<description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
-<size>15388</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.5/net.tzolov.httprepresentations.roo.addon-1.1.5-sources.jar.asc</source>
-<javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.5/net.tzolov.httprepresentations.roo.addon-1.1.5-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.httprepresentations.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="symbolicname" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="version" t="version" v="1.1.5"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="uses" v="org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.classpath,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.logging,org.springframework.roo.support.util"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.httprepresentations.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.httprepresentations.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.classpath ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.model ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.logging ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.httprepresentations.roo.addon/1.1.6" presentationname="net.tzolov.httprepresentations.roo.addon" symbolicname="net.tzolov.httprepresentations.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.6/net.tzolov.httprepresentations.roo.addon-1.1.6.jar" version="1.1.6">
-<description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
-<size>15392</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.6/net.tzolov.httprepresentations.roo.addon-1.1.6-sources.jar.asc</source>
-<javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.6/net.tzolov.httprepresentations.roo.addon-1.1.6-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.httprepresentations.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="symbolicname" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="version" t="version" v="1.1.6"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="uses" v="org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.classpath,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.logging,org.springframework.roo.support.util"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.httprepresentations.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.httprepresentations.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.classpath ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.model ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.logging ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.jetty.executable.war.roo.addon/0.1.3" presentationname="Spring Roo - Executable War" symbolicname="net.tzolov.jetty.executable.war.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.3/net.tzolov.jetty.executable.war.roo.addon-0.1.3.jar" version="0.1.3">
-<description>The Executable WAR Addon configures the Maven project to makes it 		possible to create web applications that can be run from the command 		line (java -jar your-application.war) or deployed in a container. 		When run from the command line the executable-war starts an embedded 		Jetty webserver that in turn hosts the webapp contained in the war.</description>
-<size>14305</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.3/net.tzolov.jetty.executable.war.roo.addon-0.1.3-sources.jar.asc</source>
-<javadoc>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.3/net.tzolov.jetty.executable.war.roo.addon-0.1.3-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.jetty.executable.war.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="Spring Roo - Executable War"/>
-<p n="symbolicname" v="net.tzolov.jetty.executable.war.roo.addon"/>
-<p n="version" t="version" v="0.1.3"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.jetty.executable.war.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.springframework.roo.metadata,org.springframework.roo.model,org.w3c.dom,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.util"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.jetty.executable.war.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.jetty.executable.war.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.model ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.jaxb.roo.addon/1.1.5" presentationname="Spring Roo - JAXB2 Schema complier" symbolicname="net.tzolov.jaxb.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.5/net.tzolov.jaxb.roo.addon-1.1.5.jar" version="1.1.5">
-<description>JAXB2 Schema complier addon. It adds the maven-jaxb2-plugin to your pom.xml. 		The plugin participates in the generate-code phase and produces code of the 		schema-derived classes out of the XML Schemas, DTDs and so on.</description>
-<size>13638</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.5/net.tzolov.jaxb.roo.addon-1.1.5-sources.jar.asc</source>
-<javadoc>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.5/net.tzolov.jaxb.roo.addon-1.1.5-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.jaxb.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="Spring Roo - JAXB2 Schema complier"/>
-<p n="symbolicname" v="net.tzolov.jaxb.roo.addon"/>
-<p n="version" t="version" v="1.1.5"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.jaxb.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.metadata,org.springframework.roo.process.manager,javax.xml.parsers,org.w3c.dom,org.springframework.roo.support.util"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.jaxb.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.jaxb.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.httprepresentations.roo.addon/1.1.7" presentationname="Spring Roo - HTTP Content Negotiating Resolver" symbolicname="net.tzolov.httprepresentations.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.7/net.tzolov.httprepresentations.roo.addon-1.1.7.jar" version="1.1.7">
-<description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
-<size>15424</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.7/net.tzolov.httprepresentations.roo.addon-1.1.7-sources.jar.asc</source>
-<javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.7/net.tzolov.httprepresentations.roo.addon-1.1.7-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.httprepresentations.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="Spring Roo - HTTP Content Negotiating Resolver"/>
-<p n="symbolicname" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="version" t="version" v="1.1.7"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="uses" v="org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.classpath,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.logging,org.springframework.roo.support.util"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.httprepresentations.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.httprepresentations.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.classpath ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.model ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.logging ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.http.servletproxy.roo.addon/0.1.4" presentationname="Spring Roo -  Http-Proxy To Allow Cross-Domain Access" symbolicname="net.tzolov.http.servletproxy.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.4/net.tzolov.http.servletproxy.roo.addon-0.1.4.jar" version="0.1.4">
-<description>The Http-Proxy Addon allows you to configure your web application to 		get around the Same Origin Policy restriction (e.g. cross-domain). 		You can use it to install new servlet proxies (http-proxy add), list 		them (http-proxy list), remove those not needed (http-proxy remove) 		and eventually remove all proxies with a single command 		(http-proxy cleanAll).</description>
-<size>16725</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.4/net.tzolov.http.servletproxy.roo.addon-0.1.4-sources.jar.asc</source>
-<javadoc>net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.4/net.tzolov.http.servletproxy.roo.addon-0.1.4-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.http.servletproxy.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="Spring Roo -  Http-Proxy To Allow Cross-Domain Access"/>
-<p n="symbolicname" v="net.tzolov.http.servletproxy.roo.addon"/>
-<p n="version" t="version" v="0.1.4"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.http.servletproxy.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.springframework.roo.process.manager,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.metadata,javax.xml.parsers,org.springframework.roo.support.util,org.osgi.service.component"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.http.servletproxy.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.http.servletproxy.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.httprepresentations.roo.addon/1.1.8" presentationname="Spring Roo - HTTP Content Negotiating Resolver" symbolicname="net.tzolov.httprepresentations.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.8/net.tzolov.httprepresentations.roo.addon-1.1.8.jar" version="1.1.8">
-<description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
-<size>15483</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.8/net.tzolov.httprepresentations.roo.addon-1.1.8-sources.jar.asc</source>
-<javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.8/net.tzolov.httprepresentations.roo.addon-1.1.8-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.httprepresentations.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="Spring Roo - HTTP Content Negotiating Resolver"/>
-<p n="symbolicname" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="version" t="version" v="1.1.8"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.httprepresentations.roo.addon"/>
-<p n="uses" v="org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.classpath,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.logging,org.springframework.roo.support.util"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package javax.xml.parsers</require>
-<require extend="false" filter="(&amp;(package=net.tzolov.httprepresentations.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.httprepresentations.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.classpath ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.model ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.logging ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.jaxb.roo.addon/1.1.6" presentationname="Spring Roo - JAXB2 Schema complier" symbolicname="net.tzolov.jaxb.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.6/net.tzolov.jaxb.roo.addon-1.1.6.jar" version="1.1.6">
-<description>JAXB2 Schema complier addon. It adds the maven-jaxb2-plugin to your pom.xml. 		The plugin participates in the generate-code phase and produces code of the 		schema-derived classes out of the XML Schemas, DTDs and so on.</description>
-<size>12567</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.6/net.tzolov.jaxb.roo.addon-1.1.6-sources.jar.asc</source>
-<javadoc>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.6/net.tzolov.jaxb.roo.addon-1.1.6-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.jaxb.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="Spring Roo - JAXB2 Schema complier"/>
-<p n="symbolicname" v="net.tzolov.jaxb.roo.addon"/>
-<p n="version" t="version" v="1.1.6"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.jaxb.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.support.util"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=net.tzolov.jaxb.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.jaxb.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.jetty.executable.war.roo.addon/1.0.0" presentationname="Spring Roo - Executable War" symbolicname="net.tzolov.jetty.executable.war.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/1.0.0/net.tzolov.jetty.executable.war.roo.addon-1.0.0.jar" version="1.0.0">
-<description>The Executable WAR Addon configures the Maven project to makes it 		possible to create web applications that can be run from the command 		line (java -jar your-application.war) or deployed in a container. 		When run from the command line the executable-war starts an embedded 		Jetty webserver that in turn hosts the webapp contained in the war.</description>
-<size>13814</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/1.0.0/net.tzolov.jetty.executable.war.roo.addon-1.0.0-sources.jar.asc</source>
-<javadoc>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/1.0.0/net.tzolov.jetty.executable.war.roo.addon-1.0.0-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.jetty.executable.war.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="Spring Roo - Executable War"/>
-<p n="symbolicname" v="net.tzolov.jetty.executable.war.roo.addon"/>
-<p n="version" t="version" v="1.0.0"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.jetty.executable.war.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.springframework.roo.project,org.springframework.roo.process.manager,org.springframework.roo.metadata,org.springframework.roo.model,org.w3c.dom,org.springframework.roo.support.util,org.osgi.service.component"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=net.tzolov.jetty.executable.war.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.jetty.executable.war.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.model ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.process.manager ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
-<resource id="net.tzolov.jaxb.roo.addon/1.1.7" presentationname="Spring Roo - JAXB2 Schema complier" symbolicname="net.tzolov.jaxb.roo.addon" uri="httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.7/net.tzolov.jaxb.roo.addon-1.1.7.jar" version="1.1.7">
-<description>JAXB2 Schema complier addon. It adds the maven-jaxb2-plugin to your pom.xml. 		The plugin participates in the generate-code phase and produces code of the 		schema-derived classes out of the XML Schemas, DTDs and so on.</description>
-<size>12567</size>
-<documentation>http://code.google.com/p/spring-roo-addons/</documentation>
-<source>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.7/net.tzolov.jaxb.roo.addon-1.1.7-sources.jar.asc</source>
-<javadoc>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.7/net.tzolov.jaxb.roo.addon-1.1.7-javadoc.jar.asc</javadoc>
-<license>http://www.gnu.org/copyleft/gpl.html</license>
-<category id="net.tzolov.jaxb.roo.addon"/>
-<capability name="bundle">
-<p n="manifestversion" v="2"/>
-<p n="presentationname" v="Spring Roo - JAXB2 Schema complier"/>
-<p n="symbolicname" v="net.tzolov.jaxb.roo.addon"/>
-<p n="version" t="version" v="1.1.7"/>
-</capability>
-<capability name="package">
-<p n="package" v="net.tzolov.jaxb.roo.addon"/>
-<p n="uses" v="org.springframework.roo.shell,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.support.util"/>
-<p n="version" t="version" v="0.0.0"/>
-</capability>
-<require extend="false" filter="(&amp;(package=net.tzolov.jaxb.roo.addon)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package net.tzolov.jaxb.roo.addon</require>
-<require extend="false" filter="(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.osgi.service.component ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.metadata ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.project ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.shell ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))" multiple="false" name="package" optional="false">Import package org.springframework.roo.support.util ;version=1.1.0</require>
-<require extend="false" filter="(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))" multiple="false" name="package" optional="false">Import package org.w3c.dom</require>
-</resource>
+<repository name='MyRepository' lastmodified='20120114015328.035'>
+  <resource id='net.tzolov.http.servletproxy.roo.addon/0.1.3' symbolicname='net.tzolov.http.servletproxy.roo.addon' presentationname='net.tzolov.http.servletproxy.roo.addon' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.3/net.tzolov.http.servletproxy.roo.addon-0.1.3.jar' version='0.1.3'>
+    <description>The Http-Proxy Addon allows you to configure your web application to 		get around the Same Origin Policy restriction (e.g. cross-domain). 		You can use it to install new servlet proxies (http-proxy add), list 		them (http-proxy list), remove those not needed (http-proxy remove) 		and eventually remove all proxies with a single command 		(http-proxy cleanAll).</description>
+    <size>16693</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.3/net.tzolov.http.servletproxy.roo.addon-0.1.3-sources.jar.asc</source>
+    <javadoc>net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.3/net.tzolov.http.servletproxy.roo.addon-0.1.3-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.http.servletproxy.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='net.tzolov.http.servletproxy.roo.addon'/>
+      <p n='symbolicname' v='net.tzolov.http.servletproxy.roo.addon'/>
+      <p n='version' t='version' v='0.1.3'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.http.servletproxy.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.w3c.dom,org.springframework.roo.process.manager,org.springframework.roo.project,org.springframework.roo.support.util,org.springframework.roo.metadata,javax.xml.parsers,org.osgi.service.component'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.http.servletproxy.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.http.servletproxy.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.httprepresentations.roo.addon/1.1.6' symbolicname='net.tzolov.httprepresentations.roo.addon' presentationname='net.tzolov.httprepresentations.roo.addon' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.6/net.tzolov.httprepresentations.roo.addon-1.1.6.jar' version='1.1.6'>
+    <description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
+    <size>15392</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.6/net.tzolov.httprepresentations.roo.addon-1.1.6-sources.jar.asc</source>
+    <javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.6/net.tzolov.httprepresentations.roo.addon-1.1.6-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.httprepresentations.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='symbolicname' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='version' t='version' v='1.1.6'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.classpath,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.logging,org.springframework.roo.support.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.httprepresentations.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.httprepresentations.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.classpath ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.logging ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.httprepresentations.roo.addon/1.1.4' symbolicname='net.tzolov.httprepresentations.roo.addon' presentationname='net.tzolov.httprepresentations.roo.addon' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.4/net.tzolov.httprepresentations.roo.addon-1.1.4.jar' version='1.1.4'>
+    <description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
+    <size>15440</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.4/net.tzolov.httprepresentations.roo.addon-1.1.4-sources.jar.asc</source>
+    <javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.4/net.tzolov.httprepresentations.roo.addon-1.1.4-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.httprepresentations.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='symbolicname' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='version' t='version' v='1.1.4'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.project,org.springframework.roo.metadata,javax.xml.parsers,org.springframework.roo.classpath,org.w3c.dom,org.springframework.roo.support.util,org.springframework.roo.support.logging,org.springframework.roo.process.manager'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.httprepresentations.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.httprepresentations.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.classpath ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.logging ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.httprepresentations.roo.addon/1.1.5' symbolicname='net.tzolov.httprepresentations.roo.addon' presentationname='net.tzolov.httprepresentations.roo.addon' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.5/net.tzolov.httprepresentations.roo.addon-1.1.5.jar' version='1.1.5'>
+    <description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
+    <size>15388</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.5/net.tzolov.httprepresentations.roo.addon-1.1.5-sources.jar.asc</source>
+    <javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.5/net.tzolov.httprepresentations.roo.addon-1.1.5-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.httprepresentations.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='symbolicname' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='version' t='version' v='1.1.5'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.classpath,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.logging,org.springframework.roo.support.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.httprepresentations.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.httprepresentations.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.classpath ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.logging ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.jaxb.roo.addon/1.1.4' symbolicname='net.tzolov.jaxb.roo.addon' presentationname='net.tzolov.jaxb.roo.addon' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.4/net.tzolov.jaxb.roo.addon-1.1.4.jar' version='1.1.4'>
+    <description>JAXB2 Schema complier addon. It adds the maven-jaxb2-plugin to your pom.xml. 		The plugin participates in the generate-code phase and produces code of the 		schema-derived classes out of the XML Schemas, DTDs and so on.</description>
+    <size>13625</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.4/net.tzolov.jaxb.roo.addon-1.1.4-sources.jar.asc</source>
+    <javadoc>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.4/net.tzolov.jaxb.roo.addon-1.1.4-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.jaxb.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='symbolicname' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='version' t='version' v='1.1.4'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.support.util,org.springframework.roo.metadata,javax.xml.parsers,org.springframework.roo.process.manager,org.w3c.dom'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.jaxb.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.jaxb.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.jetty.executable.war.roo.addon/0.1.2' symbolicname='net.tzolov.jetty.executable.war.roo.addon' presentationname='net.tzolov.jetty.executable.war.roo.addon' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.2/net.tzolov.jetty.executable.war.roo.addon-0.1.2.jar' version='0.1.2'>
+    <description>The Executable WAR Addon configures the Maven project to makes it 		possible to create web applications that can be run from the command 		line (java -jar your-application.war) or deployed in a container. 		When run from the command line the executable-war starts an embedded 		Jetty webserver that in turn hosts the webapp contained in the war.</description>
+    <size>14288</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.2/net.tzolov.jetty.executable.war.roo.addon-0.1.2-sources.jar.asc</source>
+    <javadoc>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.2/net.tzolov.jetty.executable.war.roo.addon-0.1.2-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.jetty.executable.war.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='net.tzolov.jetty.executable.war.roo.addon'/>
+      <p n='symbolicname' v='net.tzolov.jetty.executable.war.roo.addon'/>
+      <p n='version' t='version' v='0.1.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.jetty.executable.war.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.springframework.roo.model,org.springframework.roo.project,org.springframework.roo.metadata,javax.xml.parsers,org.w3c.dom,org.osgi.service.component,org.springframework.roo.support.util,org.springframework.roo.process.manager'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.jetty.executable.war.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.jetty.executable.war.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.http.servletproxy.roo.addon/0.1.4' symbolicname='net.tzolov.http.servletproxy.roo.addon' presentationname='Spring Roo -  Http-Proxy To Allow Cross-Domain Access' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.4/net.tzolov.http.servletproxy.roo.addon-0.1.4.jar' version='0.1.4'>
+    <description>The Http-Proxy Addon allows you to configure your web application to 		get around the Same Origin Policy restriction (e.g. cross-domain). 		You can use it to install new servlet proxies (http-proxy add), list 		them (http-proxy list), remove those not needed (http-proxy remove) 		and eventually remove all proxies with a single command 		(http-proxy cleanAll).</description>
+    <size>16725</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.4/net.tzolov.http.servletproxy.roo.addon-0.1.4-sources.jar.asc</source>
+    <javadoc>net/tzolov/http/servletproxy/roo/addon/net.tzolov.http.servletproxy.roo.addon/0.1.4/net.tzolov.http.servletproxy.roo.addon-0.1.4-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.http.servletproxy.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Spring Roo -  Http-Proxy To Allow Cross-Domain Access'/>
+      <p n='symbolicname' v='net.tzolov.http.servletproxy.roo.addon'/>
+      <p n='version' t='version' v='0.1.4'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.http.servletproxy.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.springframework.roo.process.manager,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.metadata,javax.xml.parsers,org.springframework.roo.support.util,org.osgi.service.component'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.http.servletproxy.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.http.servletproxy.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.jetty.executable.war.roo.addon/0.1.3' symbolicname='net.tzolov.jetty.executable.war.roo.addon' presentationname='Spring Roo - Executable War' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.3/net.tzolov.jetty.executable.war.roo.addon-0.1.3.jar' version='0.1.3'>
+    <description>The Executable WAR Addon configures the Maven project to makes it 		possible to create web applications that can be run from the command 		line (java -jar your-application.war) or deployed in a container. 		When run from the command line the executable-war starts an embedded 		Jetty webserver that in turn hosts the webapp contained in the war.</description>
+    <size>14305</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.3/net.tzolov.jetty.executable.war.roo.addon-0.1.3-sources.jar.asc</source>
+    <javadoc>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/0.1.3/net.tzolov.jetty.executable.war.roo.addon-0.1.3-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.jetty.executable.war.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Spring Roo - Executable War'/>
+      <p n='symbolicname' v='net.tzolov.jetty.executable.war.roo.addon'/>
+      <p n='version' t='version' v='0.1.3'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.jetty.executable.war.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.springframework.roo.metadata,org.springframework.roo.model,org.w3c.dom,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.jetty.executable.war.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.jetty.executable.war.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.jetty.executable.war.roo.addon/1.0.0' symbolicname='net.tzolov.jetty.executable.war.roo.addon' presentationname='Spring Roo - Executable War' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/1.0.0/net.tzolov.jetty.executable.war.roo.addon-1.0.0.jar' version='1.0.0'>
+    <description>The Executable WAR Addon configures the Maven project to makes it 		possible to create web applications that can be run from the command 		line (java -jar your-application.war) or deployed in a container. 		When run from the command line the executable-war starts an embedded 		Jetty webserver that in turn hosts the webapp contained in the war.</description>
+    <size>13814</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/1.0.0/net.tzolov.jetty.executable.war.roo.addon-1.0.0-sources.jar.asc</source>
+    <javadoc>net/tzolov/jetty/executable/war/roo/addon/net.tzolov.jetty.executable.war.roo.addon/1.0.0/net.tzolov.jetty.executable.war.roo.addon-1.0.0-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.jetty.executable.war.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Spring Roo - Executable War'/>
+      <p n='symbolicname' v='net.tzolov.jetty.executable.war.roo.addon'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.jetty.executable.war.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.springframework.roo.project,org.springframework.roo.process.manager,org.springframework.roo.metadata,org.springframework.roo.model,org.w3c.dom,org.springframework.roo.support.util,org.osgi.service.component'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=net.tzolov.jetty.executable.war.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.jetty.executable.war.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.httprepresentations.roo.addon/1.1.8' symbolicname='net.tzolov.httprepresentations.roo.addon' presentationname='Spring Roo - HTTP Content Negotiating Resolver' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.8/net.tzolov.httprepresentations.roo.addon-1.1.8.jar' version='1.1.8'>
+    <description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
+    <size>15483</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.8/net.tzolov.httprepresentations.roo.addon-1.1.8-sources.jar.asc</source>
+    <javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.8/net.tzolov.httprepresentations.roo.addon-1.1.8-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.httprepresentations.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Spring Roo - HTTP Content Negotiating Resolver'/>
+      <p n='symbolicname' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='version' t='version' v='1.1.8'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.classpath,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.logging,org.springframework.roo.support.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.httprepresentations.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.httprepresentations.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.classpath ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.logging ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.httprepresentations.roo.addon/1.1.7' symbolicname='net.tzolov.httprepresentations.roo.addon' presentationname='Spring Roo - HTTP Content Negotiating Resolver' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.7/net.tzolov.httprepresentations.roo.addon-1.1.7.jar' version='1.1.7'>
+    <description>Addons that adds Content Negotiating View Resolver configuration 		to your application context: MVC multiple representations By default 		the addon is configured to resolve the HTML(JSP), XML and JSON representations. 		It favors path extension (e.g. .xml, .json ..) over AcceptHeader?(s). This 		configuration is JAXB2 centric!</description>
+    <size>15424</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.7/net.tzolov.httprepresentations.roo.addon-1.1.7-sources.jar.asc</source>
+    <javadoc>net/tzolov/httprepresentations/roo/addon/net.tzolov.httprepresentations.roo.addon/1.1.7/net.tzolov.httprepresentations.roo.addon-1.1.7-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.httprepresentations.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Spring Roo - HTTP Content Negotiating Resolver'/>
+      <p n='symbolicname' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='version' t='version' v='1.1.7'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.httprepresentations.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.model,org.springframework.roo.shell,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.project,org.springframework.roo.classpath,org.springframework.roo.process.manager,javax.xml.parsers,org.springframework.roo.support.logging,org.springframework.roo.support.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.httprepresentations.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.httprepresentations.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.classpath)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.classpath ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.logging)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.logging ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.jaxb.roo.addon/1.1.5' symbolicname='net.tzolov.jaxb.roo.addon' presentationname='Spring Roo - JAXB2 Schema complier' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.5/net.tzolov.jaxb.roo.addon-1.1.5.jar' version='1.1.5'>
+    <description>JAXB2 Schema complier addon. It adds the maven-jaxb2-plugin to your pom.xml. 		The plugin participates in the generate-code phase and produces code of the 		schema-derived classes out of the XML Schemas, DTDs and so on.</description>
+    <size>13638</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.5/net.tzolov.jaxb.roo.addon-1.1.5-sources.jar.asc</source>
+    <javadoc>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.5/net.tzolov.jaxb.roo.addon-1.1.5-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.jaxb.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Spring Roo - JAXB2 Schema complier'/>
+      <p n='symbolicname' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='version' t='version' v='1.1.5'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.metadata,org.springframework.roo.process.manager,javax.xml.parsers,org.w3c.dom,org.springframework.roo.support.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=javax.xml.parsers))' extend='false' multiple='false' optional='false'>Import package javax.xml.parsers</require>
+    <require name='package' filter='(&amp;(package=net.tzolov.jaxb.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.jaxb.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.jaxb.roo.addon/1.1.7' symbolicname='net.tzolov.jaxb.roo.addon' presentationname='Spring Roo - JAXB2 Schema complier' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.7/net.tzolov.jaxb.roo.addon-1.1.7.jar' version='1.1.7'>
+    <description>JAXB2 Schema complier addon. It adds the maven-jaxb2-plugin to your pom.xml. 		The plugin participates in the generate-code phase and produces code of the 		schema-derived classes out of the XML Schemas, DTDs and so on.</description>
+    <size>12567</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.7/net.tzolov.jaxb.roo.addon-1.1.7-sources.jar.asc</source>
+    <javadoc>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.7/net.tzolov.jaxb.roo.addon-1.1.7-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.jaxb.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Spring Roo - JAXB2 Schema complier'/>
+      <p n='symbolicname' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='version' t='version' v='1.1.7'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.support.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=net.tzolov.jaxb.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.jaxb.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.jaxb.roo.addon/1.1.6' symbolicname='net.tzolov.jaxb.roo.addon' presentationname='Spring Roo - JAXB2 Schema complier' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.6/net.tzolov.jaxb.roo.addon-1.1.6.jar' version='1.1.6'>
+    <description>JAXB2 Schema complier addon. It adds the maven-jaxb2-plugin to your pom.xml. 		The plugin participates in the generate-code phase and produces code of the 		schema-derived classes out of the XML Schemas, DTDs and so on.</description>
+    <size>12567</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <source>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.6/net.tzolov.jaxb.roo.addon-1.1.6-sources.jar.asc</source>
+    <javadoc>net/tzolov/jaxb/roo/addon/net.tzolov.jaxb.roo.addon/1.1.6/net.tzolov.jaxb.roo.addon-1.1.6-javadoc.jar.asc</javadoc>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <category id='net.tzolov.jaxb.roo.addon'/>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Spring Roo - JAXB2 Schema complier'/>
+      <p n='symbolicname' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='version' t='version' v='1.1.6'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.jaxb.roo.addon'/>
+      <p n='uses' v='org.springframework.roo.shell,org.osgi.service.component,org.springframework.roo.project,org.springframework.roo.metadata,org.w3c.dom,org.springframework.roo.support.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=net.tzolov.jaxb.roo.addon))' extend='false' multiple='false' optional='false'>Import package net.tzolov.jaxb.roo.addon</require>
+    <require name='package' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.osgi.service.component ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.metadata)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.metadata ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.1.0))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util ;version=1.1.0</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
+  <resource id='net.tzolov.roo.addon.oauth2/0.3.0' symbolicname='net.tzolov.roo.addon.oauth2' presentationname='Spring Roo - OAuth2 Provider/Client Setup' uri='httppgp://spring-roo-addons.googlecode.com/svn/repo/net/tzolov/roo/addon/oauth2/net.tzolov.roo.addon.oauth2/0.3.0/net.tzolov.roo.addon.oauth2-0.3.0.jar' version='0.3.0'>
+    <description>Spring Security OAuth2 AutorizationServer/ResourceServer/Client Configuration</description>
+    <size>57286</size>
+    <documentation>http://code.google.com/p/spring-roo-addons/</documentation>
+    <license>http://www.gnu.org/copyleft/gpl.html</license>
+    <capability name='bundle'>
+      <p n='symbolicname' v='net.tzolov.roo.addon.oauth2'/>
+      <p n='presentationname' v='Spring Roo - OAuth2 Provider/Client Setup'/>
+      <p n='version' t='version' v='0.3.0'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.roo.addon.oauth2.client'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='uses:' v='org.springframework.roo.shell,org.springframework.roo.model,org.springframework.roo.project,org.springframework.roo.project.maven,net.tzolov.roo.addon.oauth2.provider,org.springframework.roo.addon.web.mvc.jsp.tiles,org.w3c.dom,org.springframework.roo.support.util,net.tzolov.roo.addon.oauth2,org.springframework.roo.process.manager'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.roo.addon.oauth2'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='uses:' v='org.springframework.roo.project,org.springframework.roo.support.util,org.w3c.dom'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='net.tzolov.roo.addon.oauth2.provider'/>
+      <p n='version' t='version' v='0.0.0'/>
+      <p n='uses:' v='org.springframework.roo.model,org.springframework.roo.classpath.operations,org.springframework.roo.project,org.springframework.roo.project.maven,org.springframework.roo.addon.web.mvc.jsp.tiles,org.w3c.dom,org.springframework.roo.support.util,org.springframework.roo.addon.propfiles,net.tzolov.roo.addon.oauth2,org.springframework.roo.process.manager,org.springframework.roo.shell'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.addon.propfiles)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.addon.propfiles;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.addon.web.mvc.jsp.tiles)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.addon.web.mvc.jsp.tiles;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.classpath.operations)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.classpath.operations;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.model)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.model;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.process.manager)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.process.manager;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.project.maven)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.project.maven;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.shell)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.shell;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.springframework.roo.support.util)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.springframework.roo.support.util;version="[1.2,2)"</require>
+    <require name='package' filter='(&amp;(package=org.w3c.dom))' extend='false' multiple='false' optional='false'>Import package org.w3c.dom</require>
+  </resource>
 </repository>
