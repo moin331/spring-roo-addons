@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.tzolov.roo.addon.oauth2</groupId>
 	<artifactId>net.tzolov.roo.addon.oauth2</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.3.0.BUILD-SNAPSHOT</version>
+	<version>0.3.0</version>
 	<name>Spring Roo - OAuth2 Provider/Client Setup</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net)</name>
@@ -111,9 +110,9 @@
         </dependency>		
 	</dependencies>
 	<scm>
-		<connection>scm:svn:https://${google.code.project.name}.googlecode.com/svn/trunk/net.tzolov.roo.addon.oauth2</connection>
-		<developerConnection>scm:svn:https://${google.code.project.name}.googlecode.com/svn/trunk/net.tzolov.roo.addon.oauth2</developerConnection>
-		<url>http://code.google.com/p/${google.code.project.name}/source/browse/net.tzolov.roo.addon.oauth2</url>
+		<connection>scm:svn:https://${google.code.project.name}.googlecode.com/svn/tags/net.tzolov.roo.addon.oauth2-0.3.0</connection>
+		<developerConnection>scm:svn:https://${google.code.project.name}.googlecode.com/svn/tags/net.tzolov.roo.addon.oauth2-0.3.0</developerConnection>
+		<url>http://code.google.com/p/${google.code.project.name}/source/browse/net.tzolov.roo.addon.oauth2/tags/net.tzolov.roo.addon.oauth2-0.3.0</url>
 	</scm>
 	<distributionManagement>
 		<repository>
@@ -273,7 +272,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
