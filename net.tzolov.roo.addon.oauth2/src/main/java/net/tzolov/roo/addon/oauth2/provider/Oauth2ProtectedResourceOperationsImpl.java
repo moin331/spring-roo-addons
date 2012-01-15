@@ -155,10 +155,10 @@ public class Oauth2ProtectedResourceOperationsImpl implements Oauth2ProtectedRes
 		}
 		
 		fileManager.createOrUpdateTextFileIfRequired(securityAppContextPath, XmlUtils.nodeToString(secAppContextDocument), false);
-
+		String resourceControllerNamePrefix = protectedResourceName.substring(0, 1).toUpperCase() + protectedResourceName.substring(1); 
 		Map<String,String> substitutionMap = new HashMap<String, String>();
 		substitutionMap.put("__TOP_LEVEL_PACKAGE__", projectOperations.getFocusedTopLevelPackage().getFullyQualifiedPackageName());
-		substitutionMap.put("__PROTECTED_RESOURCE_CONTROLLER__", protectedResourceName);
+		substitutionMap.put("__PROTECTED_RESOURCE_CONTROLLER__", resourceControllerNamePrefix);
 		substitutionMap.put("__PROTECTED_RESOURCE_MAPPING__", protectedResourceName.toLowerCase());
 		
 		String rootPackageName = projectOperations.getFocusedTopLevelPackage().getFullyQualifiedPackageName();				
