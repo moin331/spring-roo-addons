@@ -86,7 +86,7 @@ public class Oauth2ClientOperationsImpl implements Oauth2ClientOperations {
 		
 		boolean useExpressions = (httpChain.getAttribute("use-expressions") != null && httpChain.getAttribute("use-expressions").equalsIgnoreCase("true"));
 		
-		httpChain.insertBefore(new XmlElementBuilder("intercept-url", securityAppContextDocument).addAttribute("pattern", "/myclient/testResource/**").addAttribute("access", (useExpressions?"hasRole('ROLE_USER')":"ROLE_USER")).build(), httpChain.getFirstChild());
+		httpChain.insertBefore(new XmlElementBuilder("intercept-url", securityAppContextDocument).addAttribute("pattern", "/quiz/**").addAttribute("access", (useExpressions?"hasRole('ROLE_USER')":"ROLE_USER")).build(), httpChain.getFirstChild());
 
 		httpChain.appendChild(new XmlElementBuilder("custom-filter", securityAppContextDocument).addAttribute("ref", "oauth2ClientFilter").addAttribute("after", "EXCEPTION_TRANSLATION_FILTER").build());
 
