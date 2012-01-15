@@ -141,7 +141,7 @@ public class AuthorizationAndResourceServerOperationsImpl extends AbstractOperat
                 "security_login_title", "OAuth 2.0 User Login", true);
 		propFileOperations.changeProperty(projectOperations
                 .getPathResolver().getFocusedPath(Path.SRC_MAIN_WEBAPP), "WEB-INF/i18n/messages.properties", 
-                "security_login_message", "You have tried to access a Protected Resource. By default you can login as \"oauthUser\", with a password of \"oauthUser\".", true);		
+                "security_login_message", "You have tried to access a Protected Resource. By default you can login as \"resourceOwner\", with a password of \"resourceOwner\".", true);		
 
 	}
 	
