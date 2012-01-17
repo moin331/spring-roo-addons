@@ -1,7 +1,7 @@
 #summary How to to install the http-representations with Roo 1.2.0
 #labels Phase-Deploy
-*NOTE:* this version is not backward compatible. Instruction to install previous (Roo 1.1.x compatible) version is available at  
-[HttpRepresentationAddonInstallation_Roo_11x]
+_*NOTE:* This version is *not* backward compatible. For previous version check the   
+[HttpRepresentationAddonInstallation_Roo_11x Roo 1.1.x compatible installation instructions]_
 ----
 ===How to install the http-representations Spring Roo Addon (latest version: 2.0.0)===
 
