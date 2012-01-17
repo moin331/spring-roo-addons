@@ -4,7 +4,7 @@
 	<groupId>net.tzolov.jaxb.roo.addon</groupId>
 	<artifactId>net.tzolov.jaxb.roo.addon</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.1.8-SNAPSHOT</version>
+	<version>2.0.0-SNAPSHOT</version>
 	<name>Spring Roo - JAXB2 Schema complier</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net) </name>
@@ -24,7 +24,7 @@
 	<url>http://code.google.com/p/spring-roo-addons/</url>
 
 	<properties>
-		<roo.version>1.1.4.RELEASE</roo.version>
+		<roo.version>1.2.0.RELEASE</roo.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<google.code.project.name>spring-roo-addons</google.code.project.name>
 		<repo.folder>net/tzolov/jaxb/roo/addon</repo.folder>
@@ -222,5 +222,53 @@
 				</configuration>
 			</plugin>				
 		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.felix
+										</groupId>
+										<artifactId>
+											maven-scr-plugin
+										</artifactId>
+										<versionRange>
+											[1.4.2,)
+										</versionRange>
+										<goals>
+											<goal>scr</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[2.1,)</versionRange>
+										<goals>
+											<goal>copy-dependencies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>								
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 </project>

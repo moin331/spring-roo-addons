@@ -36,9 +36,9 @@ public class JaxbOperationsImpl implements JaxbOperations {
 	}
 
 	public boolean isInstallJaxbSchemaCompilerAvailable() {
-
+		
 		ProjectMetadata project = (ProjectMetadata) metadataService
-				.get(ProjectMetadata.getProjectIdentifier());
+				.get(ProjectMetadata.getProjectIdentifier(projectOperations.getFocusedModuleName()));
 
 		if (project == null) {
 			return false;
@@ -46,9 +46,8 @@ public class JaxbOperationsImpl implements JaxbOperations {
 
 		// only permit installation if they don't already have some version of
 		// JAXB2 build plugin installed
-		return project.getBuildPluginsExcludingVersion(
-				new Plugin("org.jvnet.jaxb2.maven2", "maven-jaxb2-plugin",
-						"0.7.4")).size() == 0;
+		return project.getPom().getBuildPluginsExcludingVersion(
+				new Plugin("org.jvnet.jaxb2.maven2", "maven-jaxb2-plugin","0.7.5")).size() == 0;
 	}
 
 	public void installJaxbSchemaCompiler(String schemaDirectory,
@@ -58,16 +57,16 @@ public class JaxbOperationsImpl implements JaxbOperations {
 		Element configuration = XmlUtils.getConfiguration(getClass());
 
 		// Add dependencies to POM
-		updateDependencies(configuration);
+		updateDependencies(configuration, projectOperations.getFocusedModuleName());
 
 		// Add repository to POM
-		updateMavenRepository(configuration);
+		updateMavenRepository(configuration, projectOperations.getFocusedModuleName());
 
 		// Add plugin repository to POM
-		updateMavenPluginRepository(configuration);
+		updateMavenPluginRepository(configuration, projectOperations.getFocusedModuleName());
 
 		// Add build plugins to POM
-		updateBuildPlugins(configuration, schemaDirectory, generateDirectory);
+		updateBuildPlugins(configuration, schemaDirectory, generateDirectory, projectOperations.getFocusedModuleName());
 	}
 
 	private boolean hasText(String text) {
@@ -78,17 +77,17 @@ public class JaxbOperationsImpl implements JaxbOperations {
 		return (text.length() > 0);
 	}
 
-	private void updateDependencies(Element configuration) {
+	private void updateDependencies(Element configuration, final String moduleName) {
 		List<Element> databaseDependencies = XmlUtils.findElements(
 				"/configuration/jaxb/dependencies/dependency", configuration);
 
 		for (Element dependencyElement : databaseDependencies) {
-			projectOperations.addDependency(new Dependency(dependencyElement));
+			projectOperations.addDependency(moduleName, new Dependency(dependencyElement));
 		}
 	}
 
 	private void updateBuildPlugins(Element configuration,
-			String schemaDirectory, String generateDirectory) {
+			String schemaDirectory, String generateDirectory, final String moduleName) {
 
 		List<Element> databasePlugins = XmlUtils.findElements(
 				"/configuration/jaxb/build/plugins/plugin", configuration);
@@ -116,28 +115,28 @@ public class JaxbOperationsImpl implements JaxbOperations {
 
 			}
 			
-			projectOperations.updateBuildPlugin(buildPlugin);
+			projectOperations.updateBuildPlugin(moduleName, buildPlugin);
 		}
 	}
 
-	private void updateMavenRepository(Element configuration) {
+	private void updateMavenRepository(Element configuration, final String moduleName) {
 
 		List<Element> databaseRepostories = XmlUtils.findElements(
 				"/configuration/jaxb/repositories/repository", configuration);
 
 		for (Element repositoryElement : databaseRepostories) {
-			projectOperations.addRepository(new Repository(repositoryElement));
+			projectOperations.addRepository(moduleName, new Repository(repositoryElement));
 		}
 	}
 
-	private void updateMavenPluginRepository(Element configuration) {
+	private void updateMavenPluginRepository(Element configuration, final String moduleName) {
 
 		List<Element> databasePluginRepostories = XmlUtils.findElements(
 				"/configuration/jaxb/pluginRepositories/pluginRepository",
 				configuration);
 
 		for (Element pluginRepositoryElement : databasePluginRepostories) {
-			projectOperations.addPluginRepository(new Repository(
+			projectOperations.addPluginRepository(moduleName, new Repository(
 					pluginRepositoryElement));
 		}
 	}
