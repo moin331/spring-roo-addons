@@ -16,13 +16,11 @@ classes out of the XML Schemas, DTDs and so on.
 
    svn co http://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.jaxb.roo.addon addon-jaxb 
 
-2. Change the directory to addon-jaxb and strat roo shell from there
-
-3. build the addon-jaxb:
+2. build the addon-jaxb:
    
-   roo>perform package
+   > mvn clean install
 
-Result is a net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar created in  
+Result is a net.tzolov.jaxb.roo.addon-2.1.0-SNAPSHOT.jar created in  
 your target directory. 
 
 ======================================================================
@@ -31,7 +29,7 @@ your target directory.
    
 Open the roo shell
 
-  roo>felix shell start file:/<absolute path to the target directory>/net.tzolov.jaxb.roo.addon-1.1.2-SNAPSHOT.jar
+  roo>osgi start --url file:/<absolute path to the target directory>/net.tzolov.jaxb.roo.addon-2.1.0-SNAPSHOT.jar
 
 If successful this operation will restart your roo shell.
 
@@ -41,7 +39,7 @@ To verify the installation type:
 
 Amongst other addons you should see:
 
-[  60] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.2.SNAPSHOT)
+[  76] [Active     ] [    1] Spring Roo - JAXB2 Schema complier (2.1.0.SNAPSHOT)
 
 ======================================================================
 3. Uninstall the addon
