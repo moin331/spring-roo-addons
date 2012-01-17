@@ -2,7 +2,7 @@
 #labels Phase-Deploy
 
 ===How to install jaxb-addon Spring Roo Addon (latest version: 2.0.0)===
-*Note:* This version is not backward compatible. For the previous (Roo 1.1.x) version of the addon check [JaxbAddonInstallation_Roo_11x]
+#*Note:* This version is not backward compatible. For the previous (Roo 1.1.x) version check [JaxbAddonInstallation_Roo_11x] 
  * Uninstall the older addon versions
 {{{
   roo> osgi uninstall --bundleSymbolicName net.tzolov.jaxb.roo.addon
