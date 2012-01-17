@@ -1,7 +1,7 @@
 #summary How to to install the jaxb-addon with Roo 1.2.0 shell
 #labels Phase-Deploy
-_*NOTE:* this version is not backward compatible. Instruction to install previous (Roo 1.1.x compatible) version is available at  
-[Roo 1.1.x compatible|JaxbAddonInstallation_Roo_11X]_
+_*NOTE:* This version is *not* backward compatible. For previous version check the   
+[JaxbAddonInstallation_Roo_11X Roo 1.1.x compatible installation instructions]_
 ----
 ===How to install jaxb-addon Spring Roo Addon (latest version: 2.0.0)===
  * Uninstall the older addon versions
