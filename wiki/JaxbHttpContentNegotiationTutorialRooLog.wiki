@@ -1,4 +1,4 @@
-#summary Annotated roo.log for the Roo-1.1.4 version of the  http://tzolov.blogspot.com/2010/05/spring-roo-addons-jaxb2-binding-and.html blog entry.
+#summary Annotated roo.log for the Roo-1.2.0 version of the  http://tzolov.blogspot.com/2010/05/spring-roo-addons-jaxb2-binding-and.html blog entry.
 
 === Tutorial Roo Log ===
 
@@ -22,8 +22,8 @@ osgi ps
 Amongst the other you should see the following addons installed.
 {{{
 ...
-[  56] [Active     ] [    1] net.tzolov.jaxb.roo.addon (1.1.5)
-[  57] [Active     ] [    1] net.tzolov.httprepresentations.roo.addon (1.1.8)
+[  76] [Active     ] [    1] Spring Roo - JAXB2 Schema complier (2.0.0.RELEASE)
+[  78] [Active     ] [    1] Spring Roo - HTTP Content Negotiating Resolver (2.0.0.RELEASE)
 }}}
 
 Create the project and set the persistent layer
