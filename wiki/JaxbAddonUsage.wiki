@@ -1,7 +1,5 @@
 #summary How to to use the jax-addon in Roo shell
 
-_*Note*: [http://jira.springframework.org/browse/ROO-1022 ROO-1022] issue has been resolve and there is no need to install the patched org.springframework.roo.classpath any more.
-
 == How to use the jax-addon ==
 
  * Run from the Roo shell:
