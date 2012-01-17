@@ -1,10 +1,10 @@
 * Install using this command: 
   
-	felix shell start file:C:\somewhere\target\net.tzolov.jetty.executable.war.roo.addon-0.1.0.BUILD-SNAPSHOT.jar
+	osgi start --url osgi start --url file:C:\...\net.tzolov.jetty.executable.war.roo.addon-2.0.0-SNAPSHOT.jar
 
 * Verify success via "osgi ps" and look for an entry at the bottom such as:
   
-	[ 90] [Active] [1] net-tzolov-jetty-executable-war-roo-addon (0.1.0.BUILD-SNAPSHOT)
+	[  80] [Active     ] [    1] Spring Roo - Executable War (2.0.0.RELEASE)
 
 * You'll also have the new add-on's commands available (type 'execute' and hit TAB)
 
