@@ -1,5 +1,7 @@
 #summary How to to install the executable-war-addon with Roo 1.2.x shell
-Note: this version is not compatible with Roo-1.1.x. For 1.1.x compatible version check [ExecutableWarAddonInstallation_Roo_11x]
+*NOTE:* this version is not backward compatible. Instruction to install previous (Roo 1.1.x compatible) version is available at  
+[ExecutableWarAddonInstallation_Roo_11x]
+----
 ===How to install executable-war-addon Spring Roo Addon (latest version: 2.0.0) ===
 
  * Uninstall the older addon versions
