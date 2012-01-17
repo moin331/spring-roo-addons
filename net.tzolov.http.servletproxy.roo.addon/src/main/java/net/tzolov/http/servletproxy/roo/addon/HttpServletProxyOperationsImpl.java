@@ -17,7 +17,6 @@ import org.springframework.roo.process.manager.MutableFile;
 import org.springframework.roo.project.Dependency;
 import org.springframework.roo.project.Path;
 import org.springframework.roo.project.PathResolver;
-import org.springframework.roo.project.ProjectMetadata;
 import org.springframework.roo.project.ProjectOperations;
 import org.springframework.roo.project.Repository;
 import org.springframework.roo.support.util.Assert;
@@ -80,36 +79,18 @@ public class HttpServletProxyOperationsImpl implements
 	}
 
 	public boolean isApplicableServletProxy() {
-
-		ProjectMetadata projectMetadata = (ProjectMetadata) metadataService
-				.get(ProjectMetadata.getProjectIdentifier());
-
-		if (null == projectMetadata) {
-			return false;
-		}
-
-		if (!fileManager.exists(pathResolver.getIdentifier(
-				Path.SRC_MAIN_WEBAPP, "/WEB-INF/web.xml"))) {
-			return false;
-		}
-
-		return true;
+		return projectOperations.isFocusedProjectAvailable() 
+				&& fileManager.exists(pathResolver.getFocusedIdentifier(Path.SRC_MAIN_WEBAPP, "/WEB-INF/web.xml"));
 	}
 
 	public void addServletProxy(String proxyName, String proxyHost,
 			int proxyPort, String urlPattern, boolean removePrefix) {
 
-		ProjectMetadata projectMetadata = (ProjectMetadata) metadataService
-				.get(ProjectMetadata.getProjectIdentifier());
-		Assert.notNull(projectMetadata, "Project could not be retrieved");
-
 		// Install web pieces if not already installed
-		Assert.isTrue(fileManager.exists(pathResolver.getIdentifier(
-				Path.SRC_MAIN_WEBAPP, "/WEB-INF/web.xml")),
+		Assert.isTrue(fileManager.exists(pathResolver.getFocusedIdentifier(Path.SRC_MAIN_WEBAPP, "/WEB-INF/web.xml")),
 				"web applicatio must be settup first");
 
-		Set<Dependency> servletProxyDependency = projectMetadata
-				.getDependenciesExcludingVersion(new Dependency(
+		Set<Dependency> servletProxyDependency = projectOperations.getFocusedProjectMetadata().getPom().getDependenciesExcludingVersion(new Dependency(
 						"net.tzolov.http", "servletproxy", "0.0.0"));
 
 		if (CollectionUtils.isEmpty(servletProxyDependency)) {
@@ -128,17 +109,15 @@ public class HttpServletProxyOperationsImpl implements
 		Element configuration = getConfiguration();
 
 		// Add dependencies
-		List<Element> dependencies = XmlUtils.findElements(
-				"/configuration/dependencies/dependency", configuration);
+		List<Element> dependencies = XmlUtils.findElements("/configuration/dependencies/dependency", configuration);
 		for (Element dependency : dependencies) {
-			projectOperations.addDependency(new Dependency(dependency));
+			projectOperations.addDependency(projectOperations.getFocusedModuleName(), new Dependency(dependency));
 		}
 
 		// Add repository
-		List<Element> vegaRepositories = XmlUtils.findElements(
-				"/configuration/repositories/repository", configuration);
+		List<Element> vegaRepositories = XmlUtils.findElements("/configuration/repositories/repository", configuration);
 		for (Element repositoryElement : vegaRepositories) {
-			projectOperations.addRepository(new Repository(repositoryElement));
+			projectOperations.addRepository(projectOperations.getFocusedModuleName(), new Repository(repositoryElement));
 		}
 	}
 
@@ -250,8 +229,7 @@ public class HttpServletProxyOperationsImpl implements
 	}
 
 	private WebXmlHolder getWebXmlHolder() {
-		String webXml = pathResolver.getIdentifier(Path.SRC_MAIN_WEBAPP,
-				"WEB-INF/web.xml");
+		String webXml = pathResolver.getFocusedIdentifier(Path.SRC_MAIN_WEBAPP, "WEB-INF/web.xml");
 		Assert.isTrue(fileManager.exists(webXml),
 				"web.xml not found; cannot continue");
 
@@ -268,15 +246,13 @@ public class HttpServletProxyOperationsImpl implements
 		return new WebXmlHolder(mutableWebXml, webXmlDoc);
 	}
 
-	private Element getConfiguration() {
-		InputStream templateInputStream = TemplateUtils.getTemplate(getClass(),
-				"configuration.xml");
+	private Element getConfiguration() {		
+		InputStream templateInputStream = TemplateUtils.getTemplate(getClass(), "configuration.xml");
 		Assert.notNull(templateInputStream,
 				"Could not acquire configuration.xml file");
 		Document dependencyDoc;
 		try {
-			dependencyDoc = XmlUtils.getDocumentBuilder().parse(
-					templateInputStream);
+			dependencyDoc = XmlUtils.getDocumentBuilder().parse(templateInputStream);
 		} catch (Exception e) {
 			throw new IllegalStateException(e);
 		}
