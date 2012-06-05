@@ -20,7 +20,7 @@
 		</constructor-arg>
 	</bean>
 	
-	<bean id="tokenServices" class="org.springframework.security.oauth2.provider.token.RandomValueTokenServices" xmlns="http://www.springframework.org/schema/beans">
+	<bean id="tokenServices" class="org.springframework.security.oauth2.provider.token.DefaultTokenServices" xmlns="http://www.springframework.org/schema/beans">
 		<property name="tokenStore">
 			<beans:bean class="org.springframework.security.oauth2.provider.token.InMemoryTokenStore" />
 		</property>

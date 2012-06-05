@@ -1,7 +1,7 @@
 package net.tzolov.roo.addon.oauth2;
 
 import org.springframework.roo.project.Dependency;
-import org.springframework.roo.support.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.roo.support.util.XmlElementBuilder;
 import org.springframework.roo.support.util.XmlUtils;
 import org.w3c.dom.Document;
@@ -19,7 +19,7 @@ public class OAuth2Common {
 	public static void addNamespaces(Element securityAppContext) {
 		if (StringUtils.isBlank(securityAppContext.getAttribute("xmlns:oauth"))) {
 			securityAppContext.setAttribute("xmlns:oauth", "http://www.springframework.org/schema/security/oauth2");
-			securityAppContext.setAttribute("xsi:schemaLocation", securityAppContext.getAttribute("xsi:schemaLocation") + "  http://www.springframework.org/schema/security/oauth2" + "  http://www.springframework.org/schema/security/spring-security-oauth2.xsd");
+			securityAppContext.setAttribute("xsi:schemaLocation", securityAppContext.getAttribute("xsi:schemaLocation") + "  http://www.springframework.org/schema/security/oauth2" + "  http://www.springframework.org/schema/security/spring-security-oauth2-1.0.xsd");
 		}
 		if (StringUtils.isBlank(securityAppContext.getAttribute("xmlns:c"))) {
 			securityAppContext.setAttribute("xmlns:c", "http://www.springframework.org/schema/c");
