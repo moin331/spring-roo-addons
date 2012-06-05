@@ -1,6 +1,6 @@
 #summary One-sentence summary of this page.
 =Sample OAuth2 Applications=
-
+*Note: Required Roo 1.2.2 or newer and Java 6 or newer*
 ==1. Prepare OAuut2  MySQL schema==
 Create MySQL oauth2 database  with the following tables:
 
@@ -38,7 +38,7 @@ CREATE TABLE `oauth_refresh_token` (
   `authentication` blob
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 }}}
-//Required Roo 1.2.2
+
 
 ==2. Create OAuth2 Authorization Server Roo Project (as)==
 {{{
@@ -57,7 +57,6 @@ project --topLevelPackage net.tzolov --projectName res --java 6
 persistence setup --database MYSQL --provider HIBERNATE 
 web mvc setup 
 security setup
-addon install bundle --bundleSymbolicName net.tzolov.roo.addon.oauth2
 addon list --refresh 
 addon install bundle --bundleSymbolicName net.tzolov.roo.addon.oauth2
 oauth2 resource setup --protectedResourceName MyResource 
