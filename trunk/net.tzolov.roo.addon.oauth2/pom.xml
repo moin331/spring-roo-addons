@@ -4,7 +4,7 @@
 	<groupId>net.tzolov.roo.addon.oauth2</groupId>
 	<artifactId>net.tzolov.roo.addon.oauth2</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.6.0</version>
+	<version>0.6.1-SNAPSHOT</version>
 	<name>Spring Roo - OAuth2 Provider/Resource/Client Setup</name>
 	<organization>
 		<name>(C) 2008-2010 Christian Tzolov (christian@tzolov.net)</name>
@@ -110,9 +110,9 @@
         </dependency>		
 	</dependencies>
 	<scm>
-		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/tags/0.7.0-SNAPSHOT</connection>
-		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/tags/0.7.0-SNAPSHOT</developerConnection>
-		<url>http://code.google.com/p/spring-roo-addons/source/browse/net.tzolov.roo.addon.oauth2/tags/0.7.0-SNAPSHOT</url>
+		<connection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.roo.addon.oauth2</connection>
+		<developerConnection>scm:svn:https://spring-roo-addons.googlecode.com/svn/trunk/net.tzolov.roo.addon.oauth2</developerConnection>
+		<url>http://code.google.com/p/spring-roo-addons/source/browse/net.tzolov.roo.addon.oauth2</url>
 	</scm>
 	<distributionManagement>
 		<repository>
