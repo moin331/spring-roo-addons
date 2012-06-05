@@ -39,7 +39,7 @@
 		</constructor-arg>
 	</bean>
 	
-	<beans:bean id="tokenServices" class="org.springframework.security.oauth2.provider.token.RandomValueTokenServices" p:supportRefreshToken="true" p:tokenStore-ref="tokenStore"/>
+	<beans:bean id="tokenServices" class="org.springframework.security.oauth2.provider.token.DefaultTokenServices" p:supportRefreshToken="true" p:tokenStore-ref="tokenStore"/>
     <beans:bean id="tokenStore" c:dataSource-ref="dataSource" class="org.springframework.security.oauth2.provider.token.JdbcTokenStore"/>
 	
 	<!-- Resource owners credentials-->

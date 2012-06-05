@@ -1,9 +1,9 @@
 package net.tzolov.roo.addon.oauth2.provider;
 
-import static org.springframework.roo.support.util.CollectionUtils.isEmpty; 
+import static org.springframework.roo.support.util.CollectionUtils.isEmpty;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +13,9 @@ import java.util.Set;
 
 import net.tzolov.roo.addon.oauth2.OAuth2Common;
 
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
@@ -23,11 +26,8 @@ import org.springframework.roo.project.PathResolver;
 import org.springframework.roo.project.ProjectOperations;
 import org.springframework.roo.project.Property;
 import org.springframework.roo.project.Repository;
-import org.springframework.roo.support.util.Assert;
 import org.springframework.roo.support.util.DomUtils;
-import org.springframework.roo.support.util.FileCopyUtils;
 import org.springframework.roo.support.util.FileUtils;
-import org.springframework.roo.support.util.StringUtils;
 import org.springframework.roo.support.util.XmlElementBuilder;
 import org.springframework.roo.support.util.XmlUtils;
 import org.w3c.dom.Document;
@@ -80,7 +80,7 @@ public class Oauth2ProtectedResourceOperationsImpl implements Oauth2ProtectedRes
 		Document secAppContextDocument = XmlUtils.readXml(fileManager.getInputStream(securityAppContextPath));
 		Element securityAppContext = secAppContextDocument.getDocumentElement();
 		Element httpChain = DomUtils.findFirstElementByName("http", securityAppContext);
-		Assert.notNull(httpChain, "Could not find http in " + securityAppContext);
+		Validate.notNull(httpChain, "Could not find http in " + securityAppContext);
 		
 		// Add oauth:, p: and c: namespaces to the applicationContext-security.xml
 		OAuth2Common.addNamespaces(securityAppContext);
@@ -89,7 +89,7 @@ public class Oauth2ProtectedResourceOperationsImpl implements Oauth2ProtectedRes
 
 		//Add security oauth resource intercepter and filter
 		String resourceUrlPathAccess = urlPathAccess;
-		if (StringUtils.isBlank(resourceUrlPathAccess)) {
+		if (StringUtils. isBlank(resourceUrlPathAccess)) {
 			resourceUrlPathAccess = httpUseExpressions? 
 					"hasRole('ROLE_USER') and oauthClientHasRole('ROLE_CLIENT') and oauthHasScope('read')":
 					"ROLE_USER,SCOPE_READ";
@@ -109,7 +109,7 @@ public class Oauth2ProtectedResourceOperationsImpl implements Oauth2ProtectedRes
 	
 			securityAppContext.appendChild(new XmlElementBuilder("beans:bean", secAppContextDocument)
 				.addAttribute("id", "tokenServices")
-				.addAttribute("class", "org.springframework.security.oauth2.provider.token.RandomValueTokenServices")
+				.addAttribute("class", "org.springframework.security.oauth2.provider.token.DefaultTokenServices")
 				.addAttribute("p:tokenStore-ref", "tokenStore")
 				.addAttribute("p:supportRefreshToken", "true").build());
 	
@@ -202,20 +202,23 @@ public class Oauth2ProtectedResourceOperationsImpl implements Oauth2ProtectedRes
 
 		String targetFileDestination = pathResolver.getFocusedIdentifier(path, targetName);
 
+		OutputStream outputStream = null;
 		if (!fileManager.exists(targetFileDestination)) {
 			try {
-				String input = FileCopyUtils.copyToString(new InputStreamReader(FileUtils.getInputStream(getClass(), templateName)));
-
+				String input = IOUtils.toString(FileUtils.getInputStream(getClass(), templateName));
 				if (!isEmpty(substitusionMap)) {
 					for (Entry<String, String> substitutionEntry : substitusionMap.entrySet()) {
 						input = input.replace(substitutionEntry.getKey(), substitutionEntry.getValue());
 					}
 				}
 
-				FileCopyUtils.copy(input.getBytes(), fileManager.createFile(targetFileDestination).getOutputStream());
+				outputStream = fileManager.createFile(targetFileDestination).getOutputStream();
 				
+				IOUtils.write(input.getBytes(), outputStream);
 			} catch (IOException ioe) {
 				throw new IllegalStateException(ioe);
+			} finally {
+				IOUtils.closeQuietly(outputStream);
 			}
 		}
 	}

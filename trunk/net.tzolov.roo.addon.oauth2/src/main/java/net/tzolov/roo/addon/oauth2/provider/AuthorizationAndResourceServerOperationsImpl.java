@@ -1,13 +1,16 @@
 package net.tzolov.roo.addon.oauth2.provider;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import net.tzolov.roo.addon.oauth2.OAuth2Common;
 
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
@@ -22,11 +25,8 @@ import org.springframework.roo.project.PathResolver;
 import org.springframework.roo.project.ProjectOperations;
 import org.springframework.roo.project.Property;
 import org.springframework.roo.project.Repository;
-import org.springframework.roo.support.util.Assert;
 import org.springframework.roo.support.util.DomUtils;
-import org.springframework.roo.support.util.FileCopyUtils;
 import org.springframework.roo.support.util.FileUtils;
-import org.springframework.roo.support.util.StringUtils;
 import org.springframework.roo.support.util.WebXmlUtils;
 import org.springframework.roo.support.util.XmlElementBuilder;
 import org.springframework.roo.support.util.XmlUtils;
@@ -105,7 +105,7 @@ public class AuthorizationAndResourceServerOperationsImpl extends AbstractOperat
 		Document webConfigDocument = XmlUtils.readXml(fileManager.getInputStream(webConfigPath));
 		Element webConfig = webConfigDocument.getDocumentElement();
 		Element viewController = DomUtils.findFirstElementByName("mvc:view-controller", webConfig);
-		Assert.notNull(viewController, "Could not find mvc:view-controller in " + webConfig);
+		Validate.notNull(viewController, "Could not find mvc:view-controller in " + webConfig);
 		viewController.getParentNode().insertBefore(new XmlElementBuilder("mvc:view-controller", webConfigDocument).addAttribute("path", "/login").build(), viewController);
 
 		
@@ -115,7 +115,7 @@ public class AuthorizationAndResourceServerOperationsImpl extends AbstractOperat
 		// Add the "oauth2" namespace to the Spring config file
 		if (StringUtils.isBlank(webConfig.getAttribute("xmlns:oauth"))) {
 			webConfig.setAttribute("xmlns:oauth", "http://www.springframework.org/schema/security/oauth2");
-			webConfig.setAttribute("xsi:schemaLocation", webConfig.getAttribute("xsi:schemaLocation") + "  " + "http://www.springframework.org/schema/security/oauth2" + " " + "http://www.springframework.org/schema/security/spring-security-oauth2.xsd");
+			webConfig.setAttribute("xsi:schemaLocation", webConfig.getAttribute("xsi:schemaLocation") + "  " + "http://www.springframework.org/schema/security/oauth2" + " " + "http://www.springframework.org/schema/security/spring-security-oauth2-1.0.xsd");
 		}
 		
 		// Add the authorization and the token endpoints
@@ -183,19 +183,20 @@ public class AuthorizationAndResourceServerOperationsImpl extends AbstractOperat
 				
 		String targetFileDestination = pathResolver.getFocusedIdentifier(path, targetName);
 
+		OutputStream outputStream = null;
 		if (!fileManager.exists(targetFileDestination)) {
 			try {
-								
-				String input = FileCopyUtils
-						.copyToString(new InputStreamReader(FileUtils.getInputStream(getClass(), templateName)));
-
+				
+				String input = IOUtils.toString(FileUtils.getInputStream(getClass(), templateName));
 				
 				input = input.replace("__TOP_LEVEL_PACKAGE__", projectOperations.getFocusedTopLevelPackage().getFullyQualifiedPackageName());
 
-
-				FileCopyUtils.copy(input.getBytes(),fileManager.createFile(targetFileDestination).getOutputStream());
+				outputStream = fileManager.createFile(targetFileDestination).getOutputStream();
+				IOUtils.write(input.getBytes(), outputStream);
 			} catch (IOException ioe) {
 				throw new IllegalStateException(ioe);
+			} finally {
+				IOUtils.closeQuietly(outputStream);
 			}
 		}
 	}
