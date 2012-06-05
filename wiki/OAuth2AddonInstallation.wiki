@@ -1,6 +1,6 @@
-#summary How to to install the OAuth2 Addon with Roo 1.2.0
-_*NOTE:* *Not* backward compatible! Supports only Roo 1.2.0 or newer_
-===How to install the OAuth2 Spring Roo Addon (latest version: 0.5.0)===
+#summary How to to install the OAuth2 Addon with Roo 1.2.2
+_*NOTE:* *Not* backward compatible! Supports only Roo 1.2.2 or newer_
+===How to install the OAuth2 Spring Roo Addon (latest version: 1.0.0)===
 
  * Uninstall the older addon versions
 {{{
@@ -14,7 +14,7 @@ _*NOTE:* *Not* backward compatible! Supports only Roo 1.2.0 or newer_
 
   Alternatively you can install it directly from the googlecode site:
 {{{ 
-  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.roo.addon.oauth2-0.5.0.jar 
+  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.roo.addon.oauth2-1.0.0.jar 
 }}}
 
  * Verify the installation:
@@ -24,7 +24,7 @@ _*NOTE:* *Not* backward compatible! Supports only Roo 1.2.0 or newer_
  * You should see something like:
 {{{
 ...
-[  72] [Active     ] [    1] Spring Roo - OAuth2 Provider/Client Setup (0.5.0)
+[  72] [Active     ] [    1] Spring Roo - OAuth2 Provider/Client Setup (1.0.0)
 }}}
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
