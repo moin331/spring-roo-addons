@@ -2,8 +2,7 @@
 =Sample OAuth2 Applications=
 *Note: Required Roo 1.2.2 or newer and Java 6 or newer*
 ==1. Prepare OAuut2  MySQL schema==
-To create MySQL oauth2 database follow the instructions at:
-http://code.google.com/p/spring-roo-addons/wiki/OAuth2AddonInstallation
+To create MySQL oauth2 database follow the instructions at: OAuth2SampleApplicationDBSetup
 
 ==2. Create OAuth2 Authorization Server Roo Project (as)==
 {{{
