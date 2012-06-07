@@ -6,6 +6,10 @@ http://spring-roo-addons.googlecode.com/files/OAuth2AuthorizationCodeActivityDia
 ==1. Prepare OAuut2  MySQL schema==
 Follow the instructions at: [OAuth2SampleApplicationDBSetup]
 
+Additional information about OAuth2:
+* [https://github.com/SpringSource/spring-security-oauth/wiki/oauth2 SpringSecurity OAuth2 Developers Guide]
+* [http://tools.ietf.org/html/draft-ietf-oauth-v2-26 OAuth 2.0 Authorization Framework]
+
 ==2. Create OAuth2 Authorization Server Roo Project (as)==
 {{{
 project --topLevelPackage net.tzolov --projectName as --java 6
