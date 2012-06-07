@@ -5,6 +5,10 @@
 Create MySQL oauth2 database  with the following tables:
 
 {{{
+CREATE DATABASE oauth2;
+
+USE oauth2;
+
 CREATE TABLE `oauth_access_token` (
   `token_id` varchar(256) DEFAULT NULL,
   `token` blob,
