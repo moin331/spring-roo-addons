@@ -35,7 +35,25 @@ persistence setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE
 web mvc setup 
 security setup
 osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.roo.addon.oauth2-1.0.0.jar 
-oauth2 web-client setup --authorizationServerUri http://localhost:8080/as --protectedResourceUri http://localhost:8080/res/myresource
+oauth2 web-client setup --authorizationServerUri http://localhost:8080/as --protectedResourceUri http://localhost:8181/res/myresource
 }}}
 
 ==5. Build (mvn clean install) and runn all wars in a tomcat (or jetty) container==
+
+* Start the tomcat container from the authorization-server top directory: 
+{{{ 
+ mvn tomcat:run -Dmaven.tomcat.port=8080 
+}}}
+
+* Start the tomcat container from the web-client top directory (at port 8686): 
+{{{
+ mvn tomcat:run -Dmaven.tomcat.port=8686 
+}}}
+
+* Start the tomcat container from the resource project's top directory (at port 8181): 
+{{{
+ mvn tomcat:run -Dmaven.tomcat.port=8181 
+}}}
+
+* Open:
+http://localhost:8686/PlacesClient/quiz
