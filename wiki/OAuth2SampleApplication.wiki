@@ -4,6 +4,8 @@
 ==1. Prepare OAuut2  MySQL schema==
 Create MySQL oauth2 database  with the following tables:
 
+http://code.google.com/p/spring-roo-addons/wiki/OAuth2AddonInstallation
+
 {{{
 CREATE DATABASE oauth2;
 
