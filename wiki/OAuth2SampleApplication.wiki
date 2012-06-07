@@ -39,21 +39,21 @@ oauth2 web-client setup --authorizationServerUri http://localhost:8080/as --prot
 }}}
 
 ==5. Build (mvn clean install) and runn all wars in a tomcat (or jetty) container==
-
+_Note: because all application are running on the same host they have to start on different ports_
 * Start the tomcat container from the authorization-server top directory: 
 {{{ 
  mvn tomcat:run -Dmaven.tomcat.port=8080 
 }}}
 
-* Start the tomcat container from the web-client top directory (at port 8686): 
+* Start the tomcat container from the webapp's top directory (use port 8686): 
 {{{
  mvn tomcat:run -Dmaven.tomcat.port=8686 
 }}}
 
-* Start the tomcat container from the resource project's top directory (at port 8181): 
+* Start the tomcat container from the resource project's top directory (use port 8181): 
 {{{
  mvn tomcat:run -Dmaven.tomcat.port=8181 
 }}}
 
 * Open:
-http://localhost:8686/PlacesClient/quiz
+http://localhost:8686/webapp/quiz
