@@ -51,7 +51,7 @@ persistence setup --database MYSQL --provider HIBERNATE
 web mvc setup 
 osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.roo.addon.oauth2-1.0.0.jar 
 oauth2 authorization-server setup
-// update the database.properties to point to the oauth2 database created in step 1
+// update the database.properties (inside src\main\resources\META-INF\spring\) to point to the oauth2 database created in step 1
 }}}
 
 ==3. Create Protected Resource Roo Project (res)==
