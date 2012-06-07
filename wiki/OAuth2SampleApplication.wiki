@@ -1,6 +1,8 @@
 #summary One-sentence summary of this page.
 =Sample OAuth2 Applications=
 *Note: Required Roo 1.2.2 or newer and Java 6 or newer*
+http://spring-roo-addons.googlecode.com/files/AuthorizeCodeActivityDiagram.png
+
 ==1. Prepare OAuut2  MySQL schema==
 Follow the instructions at: [OAuth2SampleApplicationDBSetup]
 
