@@ -39,7 +39,9 @@ oauth2 web-client setup --authorizationServerUri http://localhost:8080/as --prot
 }}}
 
 ==5. Build (mvn clean install) and runn all wars in a tomcat (or jetty) container==
-_Note: because all application are running on the same host they have to start on different ports_
+
+_(Note: because all application are running on the same host they have to start on different ports)_
+
 * Start the tomcat container from the authorization-server top directory: 
 {{{ 
  mvn tomcat:run -Dmaven.tomcat.port=8080 
