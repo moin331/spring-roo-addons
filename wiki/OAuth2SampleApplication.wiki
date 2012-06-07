@@ -1,6 +1,12 @@
 #summary One-sentence summary of this page.
 =Sample OAuth2 Applications=
-*Note: Required Roo 1.2.2 or newer and Java 6 or newer*
+
+The Web Client is a quiz generator application that can render  dictionary of questions and answers into user friendly web interface. The dictionary is provided by a protected web service (encoded in JSON) owned by the resource owner. 
+
+The *OAuth2* (and particularly *Authorization Code Grant* type) is used to grant the Web Client an access to the dictionary service.
+
+Activity diagram below illustrates the authorization flow
+
 http://spring-roo-addons.googlecode.com/files/OAuth2AuthorizationCodeActivityDiagram.png
 
 Additional information about OAuth2:
@@ -11,6 +17,7 @@ Additional information about OAuth2:
 Follow the instructions at: [OAuth2SampleApplicationDBSetup]
 
 ==2. Create OAuth2 Authorization Server Roo Project (as)==
+_(*Note:* Required SpringRoo 1.2.2 or higher and Java 6 or higher )_
 {{{
 project --topLevelPackage net.tzolov --projectName as --java 6
 persistence setup --database MYSQL --provider HIBERNATE 
@@ -21,6 +28,7 @@ oauth2 authorization-server setup
 }}}
 
 ==3. Create Protected Resource Roo Project (res)==
+_(*Note:* Required SpringRoo 1.2.2 or higher and Java 6 or higher )_
 {{{
 project --topLevelPackage net.tzolov --projectName res --java 6
 persistence setup --database MYSQL --provider HIBERNATE 
@@ -31,8 +39,8 @@ oauth2 resource setup --protectedResourceName MyResource
 // update the database.properties to point to the oauth2 database created in step 1
 }}}
 
-
 ==4. Create OAuth2 Web Client Application Roo Project (webapp)==
+_(*Note:* Required SpringRoo 1.2.2 or higher and Java 6 or higher )_
 {{{
 project --topLevelPackage net.tzolov --projectName webapp --java 6
 persistence setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
