@@ -71,3 +71,4 @@ _(Note: because all application are running on the same host they have to start 
 
 * Open:
 http://localhost:8686/webapp/quiz
+ Use *username:user*, *password:user* to authenticate with the *webapp*. Use *username:resourceOwner*, *password:resourceOwner* to authenticate with the *Authentication Server*
