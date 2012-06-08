@@ -1,7 +1,7 @@
 #summary One-sentence summary of this page.
 =Sample OAuth2 Applications=
 
-The Web Client is a quiz generator application that can render  dictionary of questions and answers into user friendly web interface. The dictionary is provided by a protected web service (encoded in JSON) owned by the resource owner. 
+The Web Client is a quiz generator application that renders a dictionary (e.g map of questions and answers) into user friendly web interface. The dictionary is provided (in JSON format) by a protected web service owned by the resource owner. 
 
 The *OAuth2* (and particularly *Authorization Code Grant* type) is used to grant the Web Client an access to the dictionary service.
 
