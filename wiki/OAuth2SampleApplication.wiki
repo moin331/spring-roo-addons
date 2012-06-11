@@ -7,7 +7,7 @@ The *OAuth2* (and particularly *Authorization Code Grant* type) is used to grant
 
 Activity diagram below illustrates the authorization flow
 
-http://spring-roo-addons.googlecode.com/files/OAuth2AuthorizationCodeGrantActivityDiagramV2.png
+http://spring-roo-addons.googlecode.com/files/AuthorizeCodeActivityDiagramV2.png
 
 Additional information about OAuth2:
  * [https://github.com/SpringSource/spring-security-oauth/wiki/oauth2 SpringSecurity OAuth2 Developers Guide]
