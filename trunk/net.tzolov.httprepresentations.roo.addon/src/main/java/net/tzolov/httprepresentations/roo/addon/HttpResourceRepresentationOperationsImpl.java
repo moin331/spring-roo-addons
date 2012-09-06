@@ -1,10 +1,12 @@
 package net.tzolov.httprepresentations.roo.addon;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.Validate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
@@ -19,8 +21,6 @@ import org.springframework.roo.project.PathResolver;
 import org.springframework.roo.project.ProjectMetadata;
 import org.springframework.roo.project.ProjectOperations;
 import org.springframework.roo.support.logging.HandlerUtils;
-import org.springframework.roo.support.util.Assert;
-import org.springframework.roo.support.util.FileCopyUtils;
 import org.springframework.roo.support.util.FileUtils;
 import org.springframework.roo.support.util.XmlUtils;
 import org.w3c.dom.Document;
@@ -81,19 +81,30 @@ public class HttpResourceRepresentationOperationsImpl implements HttpResourceRep
 		updateDependencies(configuration, this.projectOperations.getFocusedModuleName());
 
 		// copy the template across
-		String destination = pathResolver.getFocusedIdentifier(Path.SPRING_CONFIG_ROOT, APPLICATION_CONTEXT_CONTENTRESOLVER_XML);
+		copyFileTemplate(Path.SPRING_CONFIG_ROOT, APPLICATION_CONTEXT_CONTENTRESOLVER_XML, "applicationContext-contentresolver-template.xml");		
+	}
 
-		if (!fileManager.exists(destination)) {
+	private void copyFileTemplate(Path path, String targetName, String templateName) {
+		
+		String targetFileDestination = pathResolver.getFocusedIdentifier(path, targetName);
+
+		OutputStream outputStream = null;
+		if (!fileManager.exists(targetFileDestination)) {
 			try {
-				String input = FileCopyUtils.copyToString(new InputStreamReader(FileUtils.getInputStream(getClass(), "applicationContext-contentresolver-template.xml")));				
+				
+				String input = IOUtils.toString(FileUtils.getInputStream(getClass(), templateName));
+				
+				input = input.replace("__TOP_LEVEL_PACKAGE__", projectOperations.getFocusedTopLevelPackage().getFullyQualifiedPackageName());
 
-				FileCopyUtils.copy(input.getBytes(), fileManager.createFile(destination).getOutputStream());
+				outputStream = fileManager.createFile(targetFileDestination).getOutputStream();
+				IOUtils.write(input.getBytes(), outputStream);
 			} catch (IOException ioe) {
 				throw new IllegalStateException(ioe);
+			} finally {
+				IOUtils.closeQuietly(outputStream);
 			}
 		}
 	}
-
 
 	public boolean isInstallContentOxmBinding() {
 
@@ -111,7 +122,8 @@ public class HttpResourceRepresentationOperationsImpl implements HttpResourceRep
 	}
 
 	public void installContentOxmBinding(JavaType typeName) {
-		Assert.notNull(typeName, "Java type required");
+		
+		Validate.notNull(typeName, "Java type required");
 
 		
 		String id = typeLocationService.getPhysicalTypeIdentifier(typeName);
@@ -145,7 +157,7 @@ public class HttpResourceRepresentationOperationsImpl implements HttpResourceRep
 		Element oxmJaxbMarshaller = XmlUtils.findFirstElement(
 				"/beans/jaxb2-marshaller", rootElement);
 		logger.warning("oxmJaxbMarshaller = " + oxmJaxbMarshaller);
-		Assert.notNull(oxmJaxbMarshaller,
+		Validate.notNull(oxmJaxbMarshaller,
 				"/beans/jaxb2-marshaller definition unable to be found");
 
 		Element oxmBinding = document.createElement("oxm:class-to-be-bound");
