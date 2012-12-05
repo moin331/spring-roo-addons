@@ -1,12 +1,12 @@
 package net.tzolov.http.servletproxy.roo.addon;
 
-import java.io.InputStream;
 import java.util.List;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.logging.Logger;
 
+import org.apache.commons.lang3.Validate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
@@ -19,9 +19,7 @@ import org.springframework.roo.project.Path;
 import org.springframework.roo.project.PathResolver;
 import org.springframework.roo.project.ProjectOperations;
 import org.springframework.roo.project.Repository;
-import org.springframework.roo.support.util.Assert;
 import org.springframework.roo.support.util.CollectionUtils;
-import org.springframework.roo.support.util.TemplateUtils;
 import org.springframework.roo.support.util.WebXmlUtils;
 import org.springframework.roo.support.util.WebXmlUtils.WebXmlParam;
 import org.springframework.roo.support.util.XmlUtils;
@@ -87,7 +85,7 @@ public class HttpServletProxyOperationsImpl implements
 			int proxyPort, String urlPattern, boolean removePrefix) {
 
 		// Install web pieces if not already installed
-		Assert.isTrue(fileManager.exists(pathResolver.getFocusedIdentifier(Path.SRC_MAIN_WEBAPP, "/WEB-INF/web.xml")),
+		Validate.isTrue(fileManager.exists(pathResolver.getFocusedIdentifier(Path.SRC_MAIN_WEBAPP, "/WEB-INF/web.xml")),
 				"web applicatio must be settup first");
 
 		Set<Dependency> servletProxyDependency = projectOperations.getFocusedProjectMetadata().getPom().getDependenciesExcludingVersion(new Dependency(
@@ -106,7 +104,8 @@ public class HttpServletProxyOperationsImpl implements
 
 	private void updatePomDependencies() {
 
-		Element configuration = getConfiguration();
+		//Element configuration = getConfiguration();
+		Element configuration = XmlUtils.getConfiguration(getClass());
 
 		// Add dependencies
 		List<Element> dependencies = XmlUtils.findElements("/configuration/dependencies/dependency", configuration);
@@ -124,7 +123,7 @@ public class HttpServletProxyOperationsImpl implements
 	private void updateWebXml(String proxyName, String proxyHost,
 			int proxyPort, String urlPattern, boolean removePrefix) {
 
-		Assert.isTrue(proxyPort > 0, "proxyPort must be > 0");
+		Validate.isTrue(proxyPort > 0, "proxyPort must be > 0");
 
 		WebXmlHolder webXmlHolder = getWebXmlHolder();
 
@@ -146,7 +145,7 @@ public class HttpServletProxyOperationsImpl implements
 
 	public void removeProxyServlet(String proxyName) {
 
-		Assert.notNull(proxyName, "Null http proxy name");
+		Validate.notNull(proxyName, "Null http proxy name");
 
 		WebXmlHolder webXmlHolder = getWebXmlHolder();
 
@@ -230,7 +229,7 @@ public class HttpServletProxyOperationsImpl implements
 
 	private WebXmlHolder getWebXmlHolder() {
 		String webXml = pathResolver.getFocusedIdentifier(Path.SRC_MAIN_WEBAPP, "WEB-INF/web.xml");
-		Assert.isTrue(fileManager.exists(webXml),
+		Validate.isTrue(fileManager.exists(webXml),
 				"web.xml not found; cannot continue");
 
 		MutableFile mutableWebXml = null;
@@ -244,18 +243,5 @@ public class HttpServletProxyOperationsImpl implements
 		}
 
 		return new WebXmlHolder(mutableWebXml, webXmlDoc);
-	}
-
-	private Element getConfiguration() {		
-		InputStream templateInputStream = TemplateUtils.getTemplate(getClass(), "configuration.xml");
-		Assert.notNull(templateInputStream,
-				"Could not acquire configuration.xml file");
-		Document dependencyDoc;
-		try {
-			dependencyDoc = XmlUtils.getDocumentBuilder().parse(templateInputStream);
-		} catch (Exception e) {
-			throw new IllegalStateException(e);
-		}
-		return (Element) dependencyDoc.getFirstChild();
 	}
 }
