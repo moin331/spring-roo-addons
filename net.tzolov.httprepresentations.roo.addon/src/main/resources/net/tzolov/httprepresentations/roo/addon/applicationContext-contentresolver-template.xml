@@ -11,46 +11,10 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
-					
-	<!-- JSON Marshaling -->
-	<util:constant id="jsonBasicClassIntrospector" static-field="org.codehaus.jackson.map.introspect.BasicClassIntrospector.instance" />
-
-	<util:constant id="typeFactory" static-field="org.codehaus.jackson.map.type.TypeFactory.instance" />
+										
+	<!-- ObjectMapper Creation -->
+	<bean id="jsonObjectMapper" class="__TOP_LEVEL_PACKAGE__.util.JsonObjectMapperFactory" factory-method="createObjectMappe"/>
 	
-	<bean class="org.codehaus.jackson.xc.JaxbAnnotationIntrospector" id="jsonJaxbAnnotationIntrospector" />
-
-	<bean class="org.codehaus.jackson.map.introspect.VisibilityChecker.Std" factory-method="defaultInstance" id="visibilityChecker" />
-
-	<bean class="org.codehaus.jackson.map.ObjectMapper" id="jsonObjectMapper">
-		<property name="serializationConfig">
-			<bean class="org.codehaus.jackson.map.SerializationConfig">
-				<constructor-arg ref="jsonBasicClassIntrospector" />
-				<constructor-arg ref="jsonJaxbAnnotationIntrospector" />
-				<constructor-arg ref="visibilityChecker" />
-				<constructor-arg><null/></constructor-arg>
-				<constructor-arg><null/></constructor-arg>
-				<constructor-arg ref="typeFactory"/>
-				<constructor-arg><null/></constructor-arg>
-			</bean>
-		</property>
-		<property name="deserializationConfig">
-			<bean class="org.codehaus.jackson.map.DeserializationConfig">
-				<constructor-arg ref="jsonBasicClassIntrospector" />
-				<constructor-arg ref="jsonJaxbAnnotationIntrospector" />
-				<constructor-arg ref="visibilityChecker" />
-				<constructor-arg><null/></constructor-arg>
-				<constructor-arg><null/></constructor-arg>
-				<constructor-arg ref="typeFactory"/>
-				<constructor-arg><null/></constructor-arg>				
-			</bean>
-		</property>
-	</bean>
-	
-	<!-- XML Marshaling -->
-	<oxm:jaxb2-marshaller id="jaxbMarshaller">
-		<!-- Add your JAXB2 root classes -->
-	</oxm:jaxb2-marshaller>
-			
 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="defaultContentType" value="text/html" />
 		<property name="ignoreAcceptHeader" value="true" />
@@ -58,18 +22,21 @@
 		<property name="mediaTypes">
 			<map>
 				<entry key="json" value="application/json" />
+				<entry key="jsonp" value="application/javascript" />
 				<entry key="xml" value="application/xml" />
 			</map>
 		</property>
 		<property name="defaultViews">
 			<list>
 				<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
-					<property name="objectMapper" ref="jsonObjectMapper"/>
+				 	<property name="objectMapper" ref="jsonObjectMapper"/>
+				 	<property name="extractValueFromSingleKeyModel" value="true"></property>
 				</bean>
-				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
-					<property name="marshaller" ref="jaxbMarshaller" />
-				</bean>				
+				<bean class="__TOP_LEVEL_PACKAGE__.util.MappingJacksonJsonpView">				
+				 	<property name="objectMapper" ref="jsonObjectMapper"/>
+				 	<property name="extractValueFromSingleKeyModel" value="true"></property>				
+				</bean>
 			</list>
 		</property>
-	</bean>					
+	</bean>				
 </beans>
