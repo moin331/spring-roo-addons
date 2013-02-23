@@ -29,7 +29,7 @@ your target directory.
    
 Open the roo shell
 
-  roo>osgi start --url file:/<absolute path to the target directory>/net.tzolov.jaxb.roo.addon-2.1.0-SNAPSHOT.jar
+  roo>osgi start --url file:/<absolute path to the target directory>/net.tzolov.jaxb.roo.addon-3.2.0-SNAPSHOT.jar
 
 If successful this operation will restart your roo shell.
 
@@ -39,7 +39,7 @@ To verify the installation type:
 
 Amongst other addons you should see:
 
-[  76] [Active     ] [    1] Spring Roo - JAXB2 Schema complier (2.1.0.SNAPSHOT)
+[  76] [Active     ] [    1] Spring Roo - JAXB2 Schema complier (3.2.0.SNAPSHOT)
 
 ======================================================================
 3. Uninstall the addon
