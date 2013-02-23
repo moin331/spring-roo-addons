@@ -13,19 +13,30 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 										
 	<!-- ObjectMapper Creation -->
-	<bean id="jsonObjectMapper" class="__TOP_LEVEL_PACKAGE__.util.JsonObjectMapperFactory" factory-method="createObjectMappe"/>
+	<bean id="jsonObjectMapper" class="__TOP_LEVEL_PACKAGE__.util.JsonObjectMapperFactory" factory-method="createObjectMapper"/>
 	
 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="defaultContentType" value="text/html" />
 		<property name="ignoreAcceptHeader" value="true" />
 		<property name="favorPathExtension" value="true" />
-		<property name="mediaTypes">
-			<map>
-				<entry key="json" value="application/json" />
-				<entry key="jsonp" value="application/javascript" />
-				<entry key="xml" value="application/xml" />
-			</map>
+		
+		<property name="contentNegotiationManager">
+			<bean class="org.springframework.web.accept.ContentNegotiationManager">
+				<constructor-arg>
+					<bean
+						class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy">
+						<constructor-arg>
+							<map>
+								<entry key="json" value="application/json" />
+								<entry key="jsonp" value="application/javascript" />
+								<entry key="xml" value="application/xml" />
+							</map>
+						</constructor-arg>
+					</bean>
+				</constructor-arg>
+			</bean>
 		</property>
+		
 		<property name="defaultViews">
 			<list>
 				<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
