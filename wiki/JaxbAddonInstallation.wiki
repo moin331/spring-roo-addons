@@ -1,7 +1,8 @@
 #summary How to to install the jaxb-addon with Roo 1.2.3 shell
 #labels Phase-Deploy
-_*Compatibility:* SpringRoo 1.2.3.RELEASE, Spring 3.2.0.RELEASE, Java 1.6+
-_*NOTE:* This version is *not* backward compatible. For previous version check the   
+_*Compatibility:* Spring Roo 1.2.3.RELEASE, Spring 3.2.0.RELEASE, Java 1.6+
+
+_*Note:* This version is *not* backward compatible. For previous version check the   
 [JaxbAddonInstallation_Roo_11X Roo 1.1.x compatible installation instructions]_
 ----
 ===How to install jaxb-addon Spring Roo Addon (latest version: 3.2.0)===
@@ -33,3 +34,4 @@ _*NOTE:* This version is *not* backward compatible. For previous version check t
 ...
 jaxb xsd compiler setup - Install JAXB2 maven plugin to generate Java classes from an XML schema with the xjc schema compiler tool.
 }}}
+Put the XML Schemas (XSDs) to be compiled into the schema directory (default is src/main/resources)
