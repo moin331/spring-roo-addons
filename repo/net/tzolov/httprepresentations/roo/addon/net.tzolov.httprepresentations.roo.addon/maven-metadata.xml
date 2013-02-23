@@ -3,7 +3,7 @@
   <groupId>net.tzolov.httprepresentations.roo.addon</groupId>
   <artifactId>net.tzolov.httprepresentations.roo.addon</artifactId>
   <versioning>
-    <release>2.0.0</release>
+    <release>3.2.0</release>
     <versions>
       <version>1.1.4</version>
       <version>1.1.5</version>
@@ -11,7 +11,8 @@
       <version>1.1.7</version>
       <version>1.1.8</version>
       <version>2.0.0</version>
+      <version>3.2.0</version>
     </versions>
-    <lastUpdated>20120117205554</lastUpdated>
+    <lastUpdated>20130223124336</lastUpdated>
   </versioning>
 </metadata>
