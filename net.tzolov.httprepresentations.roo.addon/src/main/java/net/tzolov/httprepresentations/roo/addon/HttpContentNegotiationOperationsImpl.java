@@ -168,8 +168,7 @@ public class HttpContentNegotiationOperationsImpl implements HttpContentNegotiat
 
 		String id = typeLocationService.getPhysicalTypeIdentifier(typeName);
 		if (id == null) {
-			logger.warning("Cannot locate source for '" + typeName.getFullyQualifiedTypeName() + "'");
-			return;
+			logger.warning("Warning: Cannot locate the source code for '" + typeName.getFullyQualifiedTypeName() + "'. Perhaps it comes from another project or third-part dependency");
 		}
 
 		String contentresolver = pathResolver.getFocusedIdentifier(Path.SPRING_CONFIG_ROOT, APPLICATION_CONTEXT_CONTENTRESOLVER_XML);
