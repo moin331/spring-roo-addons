@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<httprepresentations>		
+		<dependencies>
+    		<dependency>
+            	<groupId>org.codehaus.jackson</groupId>
+            	<artifactId>jackson-jaxrs</artifactId>
+            	<version>1.9.9</version>
+        	</dependency>
+    		<dependency>
+            	<groupId>org.codehaus.jackson</groupId>
+            	<artifactId>jackson-xc</artifactId>
+            	<version>1.9.9</version>
+        	</dependency>
+        	<dependency>
+            	<groupId>org.springframework</groupId>
+            	<artifactId>spring-oxm</artifactId>
+            	<version>${spring.version}</version>
+        	</dependency>        	
+		</dependencies>
+	</httprepresentations>
+</configuration>
