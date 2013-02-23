@@ -16,7 +16,7 @@ import org.codehaus.jackson.xc.JaxbAnnotationIntrospector;
 public class JsonObjectMapperFactory {
 
 
-	public static ObjectMapper createObjectMappe() {
+	public static ObjectMapper createObjectMapper() {
 		
 		JaxbAnnotationIntrospector jaxbAnnotationIntrospector = new JaxbAnnotationIntrospector();
 		
