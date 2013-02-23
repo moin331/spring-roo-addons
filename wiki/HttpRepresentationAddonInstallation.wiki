@@ -1,6 +1,6 @@
-#summary How to to install the http-representations with Roo 1.2.0
+#summary How to to install the http-representations with Roo 1.2.3
 #labels Phase-Deploy
-_*NOTE:* This version is *not* backward compatible. For previous version check the   
+_*Note:* This version is *not* backward compatible. For previous version check the   
 [HttpRepresentationAddonInstallation_Roo_11x Roo 1.1.x compatible installation instructions]_
 ----
 ===How to install the http-representations Spring Roo Addon (latest version: 2.0.0)===
@@ -17,7 +17,7 @@ _*NOTE:* This version is *not* backward compatible. For previous version check t
 
   Alternatively you can install it directly from the googlecode site:
 {{{ 
-  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-2.0.0.jar 
+  roo> osgi start --url http://spring-roo-addons.googlecode.com/files/net.tzolov.httprepresentations.roo.addon-3.2.0.jar 
 }}}
 
  * Verify the installation:
@@ -27,7 +27,7 @@ _*NOTE:* This version is *not* backward compatible. For previous version check t
  * You should see something like:
 {{{
 ...
-[  60] [Active     ] [    1] Spring Roo - HTTP Content Negotiating Resolver (2.0.0)
+[  60] [Active     ] [    1] Spring Roo - HTTP Content Negotiating Resolver (3.2.0)
 }}}
  * From the Roo Shell type *help* to see the list of all supported commands. The following line should appear amongst others entries:
 {{{
