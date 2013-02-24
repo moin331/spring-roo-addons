@@ -7,20 +7,20 @@ roo> http resource representation setup
 Amongst other the setup will register JSON and JSONP (un)marshallar.
 
 ==== 1.2 JSON and JSONP representations ====
-_Note: By default the json object mapper will use a plain object marshall/unmarshal strategy (e.g. will map all public fields). _
+_Note: By default the json object mapper uses a plain object marshall/unmarshal strategy (e.g. maps all public fields). _
 
-To get the data in JSON representation add *.json* postfix to the url. For example http://localhost:8080/myapp/myresource.json or http://localhost:8080/myapp/myresource/1.json
+For JSON representation add *.json* postfix to the url. For example http://localhost:8080/myapp/myresource.json or http://localhost:8080/myapp/myresource/1.json
 
-To get the data in JSONP representation add *.jsonp* postfix to the url and provide a *callback* url parmeter. For example http://localhost:8080/myapp/myresource.jsonp?callback=myhandler or http://localhost:8080/myapp/myresource/1.json?callback=myhandler
+For JSONP representation add *.jsonp* postfix to the url and provide a *callback* url parmeter. For example http://localhost:8080/myapp/myresource.jsonp?callback=myhandler or http://localhost:8080/myapp/myresource/1.json?callback=myhandler
 
-==== 1.3 XML representation with Jaxb2 binding =====
-You can generate JAXB2 classes either from an existing XML Schema (see the [] for example how to do this) or you can JAXB2 annotate your existing domain model Java classes.
+==== 1.3 XML representation using JAXB2 binding =====
+You can generate JAXB2 classes either from an existing XML Schema (see the [] for example how to do this) or JAXB2 annotate your existing domain/entity classes.
 
 Then register one ore more of the JAXB2 annotated classes to the marshaller configuration.
 {{{
 roo> http resource add oxm --class my.package.MyJaxbClass
 }}}
-The my.package.MyJaxbClass will be added to the *oxm:jaxb2-marshaller* element of your applicationContext-contentresolver.xml file. One executed for the first time this command will add also JAXB2 (un)marshaller as well. 
+The my.package.MyJaxbClass will be added to the *oxm:jaxb2-marshaller* element of your applicationContext-contentresolver.xml file. When performed for the first time this command adds the JAXB2 (un)marshaller configuration as well. 
 
 Now you can access your data represented in XML by adding a *.xml* postfix to you urls. For example:
 http://localhost:8080/myapp/myresource.xml or http://localhost:8080/myapp/myresource/1.xml
