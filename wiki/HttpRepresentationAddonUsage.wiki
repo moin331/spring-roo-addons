@@ -30,8 +30,10 @@ _Note: When an object is annotated with JAXB2 annotation the JSON/JSONP object m
 ==== 1.4 CORS (Cross Origin Resource Sharing) =====
 Enable [http://www.w3.org/TR/cors | client-side cross-origin requests] in your web application
 {{{
-roo> http cross-origin-resource-sharing 
+roo> http cross-origin-resource-sharing setup
 }}}
+This commands adds a new CorsFilter.java class and registers it to the web.xml. By default it permits all all HTTP methods (e.g. "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE" ) and all Origins (e.g "Access-Control-Allow-Origin", "*" ). 
+Modify the CorsFilter.java to change the default behavior
 
 === 2. Tutorials:===
 _Note: this tutorial might be outdated!_
