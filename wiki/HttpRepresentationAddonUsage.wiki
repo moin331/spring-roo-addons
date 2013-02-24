@@ -28,7 +28,7 @@ http://localhost:8080/myapp/myresource.xml or http://localhost:8080/myapp/myreso
 _Note: When an object is annotated with JAXB2 annotation the JSON/JSONP object mapper will use those annotation over the plain object mapping. 
 
 ==== 1.4 CORS (Cross Origin Resource Sharing) =====
-Enable [http://www.w3.org/TR/cors/| client-side cross-origin requests] in your web application
+Enable [http://www.w3.org/TR/cors | client-side cross-origin requests] in your web application
 {{{
 roo> http cross-origin-resource-sharing 
 }}}
