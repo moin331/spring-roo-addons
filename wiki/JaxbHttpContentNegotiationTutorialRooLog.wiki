@@ -1,4 +1,4 @@
-#summary Annotated roo.log for the Roo-1.2.0 version of the  http://tzolov.blogspot.com/2010/05/spring-roo-addons-jaxb2-binding-and.html blog entry.
+#summary Annotated roo.log for the Roo-1.2.3 version of the  http://tzolov.blogspot.com/2010/05/spring-roo-addons-jaxb2-binding-and.html blog entry.
 
 === Tutorial Roo Log ===
 
@@ -37,7 +37,7 @@ Set the jaxb maven configuration
 jaxb xsd compiler setup --generateDirectory src/main/java
 }}}
 
-Copy the people.xsd in your src/main/resource directory and the build the project to enforce the generation.
+Copy the [http://spring-roo-addons.googlecode.com/files/people.xsd people.xsd] in your src/main/resource directory and the build the project to enforce the generation.
 {{{
 perform package
 }}}
