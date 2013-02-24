@@ -38,5 +38,5 @@ This commands adds a new CorsFilter.java class and registers it to the web.xml. 
 To change the default behaviour modify CorsFilter as needed. 
 
 == Tutorials:==
-_Note: this tutorial might be outdated!_
+_Note: this tutorial is outdated!_
  * [http://tzolov.blogspot.com/2010/05/spring-roo-addons-jaxb2-binding-and.html Spring Roo Addons : JAXB2 binding and Content Negotiation Support Tutorial] with [JaxbHttpContentNegotiationTutorialRooLog  annotated roo.log]
