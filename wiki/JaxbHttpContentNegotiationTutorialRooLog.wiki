@@ -22,8 +22,8 @@ osgi ps
 Amongst the other you should see the following addons installed.
 {{{
 ...
-[  76] [Active     ] [    1] Spring Roo - JAXB2 Schema complier (2.0.0.RELEASE)
-[  78] [Active     ] [    1] Spring Roo - HTTP Content Negotiating Resolver (2.0.0.RELEASE)
+[  76] [Active     ] [    1] Spring Roo - JAXB2 Schema complier (3.2.0.RELEASE)
+[  78] [Active     ] [    1] Spring Roo - HTTP Content Negotiating Resolver (3.2.0.RELEASE)
 }}}
 
 Create the project and set the persistent layer
