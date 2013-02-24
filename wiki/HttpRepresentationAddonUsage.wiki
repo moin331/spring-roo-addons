@@ -1,15 +1,37 @@
-== How to use the http representation addon ==
+== 1. How to use the http representation addon ==
 
- * Add http content negotiation setup
+==== 1.1 HTTP Content Negotiation Setup ====
 {{{
 roo> http resource representation setup
 }}}
+Amongst other the setup will register JSON and JSONP (un)marshallar.
 
- * Add one ore more JAXB2 annotated classes to the marshaller configuration.
+==== 1.2 JSON and JSONP representations ====
+_Note: By default the json object mapper will use a plain object marshall/unmarshal strategy (e.g. will map all public fields). _
+
+To get the data in JSON representation add *.json* postfix to the url. For example http://localhost:8080/myapp/myresource.json or http://localhost:8080/myapp/myresource/1.json
+
+To get the data in JSONP representation add *.jsonp* postfix to the url and provide a *callback* url parmeter. For example http://localhost:8080/myapp/myresource.jsonp?callback=myhandler or http://localhost:8080/myapp/myresource/1.json?callback=myhandler
+
+==== 1.3 XML representation with Jaxb2 binding =====
+You can generate JAXB2 classes either from an existing XML Schema (see the [] for example how to do this) or you can JAXB2 annotate your existing domain model Java classes.
+
+Then register one ore more of the JAXB2 annotated classes to the marshaller configuration.
 {{{
 roo> http resource add oxm --class my.package.MyJaxbClass
 }}}
-In result the The my.package.MyJaxbClass is added inside the *oxm:jaxb2-marshaller* element of your applicationContext-contentresolver.xml file.
+The my.package.MyJaxbClass will be added to the *oxm:jaxb2-marshaller* element of your applicationContext-contentresolver.xml file. One executed for the first time this command will add also JAXB2 (un)marshaller as well. 
 
-=== Tutorials:===
+Now you can access your data represented in XML by adding a *.xml* postfix to you urls. For example:
+http://localhost:8080/myapp/myresource.xml or http://localhost:8080/myapp/myresource/1.xml
+
+_Note: When an object is annotated with JAXB2 annotation the JSON/JSONP object mapper will use those annotation over the plain object mapping. 
+
+==== 1.4 CORS (Cross Origin Resource Sharing)=====
+{{{
+roo> http cross-origin-resource-sharing 
+}}}
+
+=== 2. Tutorials:===
+_Note: this tutorial might be outdated!_
  * [http://tzolov.blogspot.com/2010/05/spring-roo-addons-jaxb2-binding-and.html Spring Roo Addons : JAXB2 binding and Content Negotiation Support Tutorial] with [JaxbHttpContentNegotiationTutorialRooLog  annotated roo.log]
